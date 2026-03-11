@@ -35,7 +35,7 @@
   {% endif %}
 
   <title>{{projj.Title}}</title>
-  <link rel="icon" href="{% static 'images/Conscient-Elevate/conscientfavicon.ico' %}" type="image/gif" sizes="16x16" />
+  <link rel="icon" href="{% static 'images/background/nirantarw.jpg' %}" type="image/gif" sizes="16x16" />
   <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="{{projj.Title}}" name="description" />
@@ -58,6 +58,24 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <!-- SweetAlert2 CDN -->
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+  <!-- Meta Pixel Code -->
+  <script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '940243872089322');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=940243872089322&ev=PageView&noscript=1"
+  /></noscript>
+  <!-- End Meta Pixel Code -->
 
 </head>
 
@@ -97,8 +115,8 @@
                 <!-- logo begin -->
                 <div id="logo">
                   <a href="/">
-                      <img class="logo-main" src="{% static 'images/background/invstlogo.png' %}" alt="investinestates" style="width:130px;height:100px;" />
-                      <img class="logo-scroll" src="{% static 'images/background/invstlogo.png' %}" alt="investinestates" style="width:130px;height:100px;" />
+                      <img class="logo-main" src="{% static 'images/background/nirantarw.jpg' %}" alt="nirantar realty" style="width:130px;height:100px;" />
+                      <img class="logo-scroll" src="{% static 'images/background/nirantarw.jpg' %}" alt="nirantar realty" style="width:130px;height:100px;" />
                     </a>
                 </div>
                 <!-- logo close -->
@@ -595,7 +613,7 @@
                   {{projj.City}}, {{projj.Zipcode}}
                 </div>
                 <div>
-                  <img src="{% static 'images/Conscient-Elevate/Conscient-logo.png' %}" class="w-200px" alt="" /><br />
+                  <img src="{% static 'images/background/nirantarw.jpg' %}" class="w-200px" alt="" /><br />
                   <div class="social-icons mb-sm-30 mt-4 mb-2">
                     <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
@@ -605,8 +623,8 @@
                 </div>
                 <div>
                   <h3 class="fs-20">Contact Us</h3>
-                  T. +91 9876543210<br />
-                  M. contact@conscientelevate.com
+                  T. +91 9811851155<br />
+                  M. nirantarrealty@gmail.com
                 </div>
               </div>
             </div>
