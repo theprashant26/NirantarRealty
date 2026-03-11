@@ -1,0 +1,158 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+        <!-- content begin -->
+
+
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="{% static 'images/background/cbann.png' %}" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h1 class="fw-500">Contact Us</h1>
+                            <p class="lead mt-3 fw-500">
+                                Looking to contact a real estate agent in Delhi/NCR? At Paarth Promoters Realty, we’re here to assist you with your real estate inquiries—whether you're buying, selling, or exploring the best investment opportunities in the region.
+                            </p>
+                            <ul class="crumb">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">Contact Us</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-overlay-2"></div>
+            </section>
+            
+                    <!-- our contact -->
+                    <section class="contact_us shadow-soft">
+                        <div class="container-fluid contact">
+                            <div class="row">
+                                <div class="col-lg-4 leftpro">
+                                    <div class="elemt rounded-20 shadow">
+                                        <div class="text-div">
+                                            <p>Contact Form <i class="fa-solid fa-arrow-right"></i></p>
+                                            <p>Contact Form <i class="fa-solid fa-arrow-right"></i></p>
+                                        </div>
+                                    </div>
+                                    <h2 class="touch">Get In Touch</h2>
+                                    <p><span>W</span>e welcome all your real estate inquiries—from site visits and property bookings to project details and price lists. Whether you're a first-time homebuyer or a seasoned investor looking to invest in estates, our experienced property consultants are here to help. </p>
+                                    <h3>Our Office</h3>
+                                        <div class="bg-light hover relative text-center wow fadeInUp" data-wow-delay=".3s">
+                                            <div class="relative overflow-hidden rounded-10 shadow-soft"  style="height: 50vh!important; object-fit: contain;">
+                                                <!-- <a href="city.html"> -->
+                                                <div class="absolute start-0 w-100 abs-middle fs-36 text-white text-center z-2">
+                                                    <h4 class="mb-0 hover-scale-in-3">Noida, Delhi/NCR</h4>
+                                                </div>
+                                                <img src="{% static 'images/gallery/banglore.webp' %}"
+                                                class="img-fluid hover-scale-1-2 h-100 w-100 " alt="" >
+                                                <div class="gradient-trans-black-bottom abs w-100 h-100 " style="bottom: 0px;">
+                                                </div>
+                                            <!-- </a> -->
+                                            </div>
+            
+                                        </div>
+                                </div>
+                                <div class="col-lg-8">
+                                 
+                                    <div class="contact_inner shadow-soft">
+                                        <div class="row">
+                                            <div class="col-md-10">
+                                             
+                                                <div class="contact_form_inner">
+                                                    <div class="contact_field">
+                                                        <h3>Contact Us</h3>
+                                                        <p>Feel Free to contact us any time. We will get back to you as soon as we can!.</p>
+                                                        <form action="{% url 'contact' %}" method="post" class="contact_form">
+                                                            {% csrf_token %}
+                                                            <input type="text" name="name" class="form-control form-group" placeholder="Enter Your Name" required />
+                                                            <input type="email" name="email" class="form-control form-group" placeholder="Enter your Mail" required />
+                                                            <input type="tel" name="mobile" class="form-control form-group" placeholder="Enter your Mobile Number" required />
+                                                            <textarea class="form-control form-group" name="message" placeholder="Message" required></textarea>
+                                                            <button class="contact_form_submit" type="submit">
+                                                                <div class="sendbtn">
+                                                                    <p>send</p>
+                                                                    <p>send</p>
+                                                                </div>
+                                                            </button>
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-2">
+                                                <div class="play-now fixed" style="top:0px!important;">
+                                                    <svg
+                                                      xmlns="http://www.w3.org/2000/svg"
+                                                      xmlns:xlink="http://www.w3.org/1999/xlink"
+                                                      width="300px"
+                                                      height="300px"
+                                                      viewBox="0 0 300 300"
+                                                    >
+                                                      <defs>
+                                                        <path
+                                                          id="circlePath"
+                                                          d="M 150,150 m -60, 0 a 60,60 0 1,1 120,0 a 60,60 0 1,1 -120,0"
+                                                        />
+                                                      </defs>
+                                                      <g>
+                                                        <use xlink:href="#circlePath" fill="none" />
+                                                        <text>
+                                                          <textPath href="#circlePath" startOffset="0%">
+                                                            Celestia - Contact Us - Celestia Luxury -
+                                                          </textPath>
+                                                        </text>
+                                                      </g>
+                                                    </svg>
+                                                  </div>
+                                                <div class="right_conatct_social_icon d-flex align-items-end">
+                                                    
+                                                   <div class="socil_item_inner d-flex">
+                                                      <li><a href="#"><i class="fab fa-facebook-square"></i></a></li>
+                                                      <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                                                      <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                                   </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="contact_info_sec shadow-soft">
+                                            <h4>Contact Info</h4>
+                                            <div class="d-flex info_single align-items-center">
+                                                <i class="fas fa-headset"></i>
+                                                <span>+91 9711331371</span>
+                                            </div>
+                                            <div class="d-flex info_single align-items-center">
+                                                <i class="fas fa-envelope-open-text"></i>
+                                                <span>info@investinestates.in</span>
+                                            </div>
+                                            <div class=" info_single align-items-center">
+                                                <i class="fas fa-map-marked-alt"></i>
+                                                <span>Tower A, Office No. 1510
+                                                    ATS Bouquet, Sector 132
+                                                    Noida - 201304, Uttar Pradesh, India</span>
+                                            </div>
+                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    <section class="map_sec shadow-soft">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-10 offset-md-1">
+                                    <div class="map_inner text-center">
+                                        <h2 class="fw-600">Find Us on Google Map</h2>
+                                        <div class="map_bind ">
+                                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1752.9912249160923!2d77.37929358865755!3d28.51017574393301!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce882fa6d9973%3A0xd46f16a9642662a5!2sATS%20BOUQUET%2C%20Block%20B%2C%20Sector%20132%2C%20Noida%2C%20Uttar%20Pradesh%20201304!5e0!3m2!1sen!2sin!4v1746444367148!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0" ></iframe>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                
+        </div>
+        <!-- content close -->
+{% endblock %}

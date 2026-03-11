@@ -1,0 +1,181 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="{% static 'images/background/6.webp' %}" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h1>All Projects</h1>
+                            <ul class="crumb pt-5 text-center">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">All Projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-overlay"></div>
+            </section>
+ 
+            <!-- Advance Search -->
+            <section class="py-5">
+                <div class="container">
+                    <div class="bg-white p-4 p-md-4 rounded-5 shadow-lg">
+                        <form method="get" action="{% url 'projects-filter' %}" class="row g-3 align-items-end">
+
+                            <!-- Location input -->
+                            <div class="col-md-3">
+                                <label for="location" class="form-label fw-semibold">Location</label>
+                                <select name="location" id="location" class="form-select form-select-lg rounded-pill shadow-sm">
+                                    <option value="">Select Location</option>
+                                    {% for location in locations %}
+                                        <option value="{{ location.id }}">{{ location.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <!-- Project Brand -->
+                            <div class="col-md-3">
+                                <label for="brand" class="form-label fw-semibold">Project Brand</label>
+                                <select name="brand" id="brand" class="form-select form-select-lg rounded-pill shadow-sm">
+                                    <option value="">Select Brand</option>
+                                    {% for brand in brands %}
+                                        <option value="{{ brand.id }}">{{ brand.name }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <!-- Project Stage -->
+                            <div class="col-md-3">
+                                <label for="stage" class="form-label fw-semibold">Project Stage</label>
+                                <select name="stage" id="stage" class="form-select form-select-lg rounded-pill shadow-sm">
+                                    <option value="">Select Stage</option>
+                                    {% for st in stages %}
+                                        <option value="{{ st.id }}">{{ st.stage }}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+
+                            <!-- Price Range -->
+                            <div class="col-md-3">
+                                <label for="price_range" class="form-label fw-semibold">Price Range</label>
+                                <select name="price_range" id="price_range" class="form-select form-select-lg rounded-pill shadow-sm">
+                                    <option value="">Select Price Range</option>
+                                    <option value="0-5000000">Below ₹50 Lakhs</option>
+                                    <option value="5000000-10000000">₹50L - ₹1Cr</option>
+                                    <option value="10000000-20000000">₹1Cr - ₹2Cr</option>
+                                    <option value="20000000-999999999">Above ₹2Cr</option>
+                                </select>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="col-md-12 d-grid contact_field p-1">
+                                <button type="submit" class="contact_form_submit"
+                                    style="background: linear-gradient(to top right, #ff9c00 -5%, #ff9157 100%);">
+                                    <div class="sendbtn">
+                                        <p>Search</p>
+                                        <p>Search</p>
+                                    </div>
+                                </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section class="relative lines-deco mb-5" style="padding-top:10px">
+                <div class="container">
+                    <div class="row g-4">
+                        <h3 class="text-center">Projects</h3>
+                        {% for p in proj reversed %}
+                        <!-- room begin -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="bg-light hover relative text-center wow fadeInUp" data-wow-delay=".3s">
+                                <div class="relative overflow-hidden rounded-10 shadow-soft">
+                                    <div class="abs z-2 w-100 text-center mt-4">
+                                        <h3 class="mb-0 fs-4  hover-scale-1-1 p-color fw-600">{{p.Title}}</h3>
+                                        <h3 class=" text-light fs-14">{{p.Address_line1}}</h3>
+                                    </div>
+                                    <div class="absolute mb-0 start-0 w-100 abs-end fs-36 text-white text-center z-2">
+                                        <h6 class="mb-0 hover-scale-in-2 p-color">{{p.Size}}</h6>
+                                        <h6 class="mb-0 hover-scale-in-2 p-color">
+                                            {% for c in p.Configuration.all %}
+                                                {{ c.c_name }}{% if not forloop.last %}, {% endif %}
+                                            {% endfor %}
+                                        </h6>
+                                         <button class="mb-0 hover-scale-in-2 p-color mt-2 fs-6 brochure p-1 fw-600" style="border:none"><a href="{% url 'projectdetail' p.project_slug %}" class="view">view</a></button>
+                                    </div>
+
+                                    {% if p.gallery_images.first.image %}
+                                    <img src="{{ p.gallery_images.first.image.url }}" class="img-fluid hover-scale-1-2" alt="" style="height: 300px !important; ">
+                                    {% endif %}
+                                    <div class="gradient-trans-black-bottom abs w-100 h-100 " style="bottom: 0px;"></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- room end -->
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </section>
+
+            <!-- project section Projects-1 -->
+            <section class="pb-80 pt-5">
+                <div class="container ">
+                  <div class="row g-4">
+                    <div class="col-lg-8 offset-lg-2 text-center">
+                      <h2 class="wow fadeInUp mb-4">Featured Projects</h2>
+                      <div class="subtitle id-color wow fadeInUp pb-3">
+                        Check out some of our listed properties
+                      </div>
+                    </div>
+                  </div>
+                  <div class="owl-carousel  owl-theme" id="featureProject2"  >
+                    {% for f in featured_proj %}
+                    <!-- item1 -->
+                    <div class="item">
+                        <div class="  hover relative text-center wow fadeInUp" data-wow-delay=".3s">
+                            <div class="relative overflow-hidden rounded-10 shadow-soft">
+                                <div class="abs z-2 w-100 text-center mt-4">
+                                    <h3 class="mb-0 fs-4  hover-scale-1-1 p-color fw-600">{{f.Title}}</h3>
+                                    <h3 class=" text-light fs-14">{{f.Address_line1}}</h3>
+                                </div>
+                                <div class="absolute mb-0 start-0 w-100 abs-end fs-36 text-white text-center z-2">
+                                    {% with f.Configuration.all|first as config %}
+                                        {% if config %}
+                                            <h6 class="mb-0 hover-scale-in-2 p-color">{{ config }}</h6>
+                                        {% endif %}
+                                    {% endwith %}
+                                    <h6 class="mb-0 hover-scale-in-2 p-color">{{f.Price}}</h6>
+                                    <button class="mb-0 hover-scale-in-2 p-color mt-2 fs-6 brochure p-1 fw-600"
+                                        style="border:none"><a href="{% url 'projectdetail' f.project_slug %}"
+                                            class="view">View</a></button>
+                                </div>
+    
+                                {% if f.gallery_images.first.image %}
+                                <img src="{{ f.gallery_images.first.image.url }}" class="img-fluid hover-scale-1-2" alt="" style="height: 300px !important; ">
+                                {% endif %}
+                                <div class="gradient-trans-black-bottom abs w-100 h-100 " style="bottom: 0px;"></div>
+                            </div>
+    
+                        </div>
+                    </div>
+                    <!-- item1 End-->
+                    {% endfor %}
+                  </div>
+                </div>
+              </section>
+            <!-- project section Projects-1 -->
+
+        </div>
+        <!-- content close -->
+{% endblock %}

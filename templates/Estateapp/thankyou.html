@@ -1,0 +1,178 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+    {% if project.gtm_id %}
+    <!-- Google Tag Manager -->
+    <script>
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id={{ project.gtm_id }}'+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','{{ project.gtm_id }}');
+    </script>
+    <!-- End Google Tag Manager -->
+    {% endif %}
+
+    <title>Thankyou</title>
+    <link rel="icon" href="{% static 'images/icon.webp' %}" type="image/gif" sizes="16x16" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+    <meta content="" name="author" />
+    <!-- CSS Files
+    ================================================== -->
+    <link
+      rel="stylesheet"
+      href="https://md-aqil.github.io/images/swiper.min.css"
+    />
+    <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link
+      href="{% static 'css/bootstrap.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+      id="bootstrap"
+    />
+    <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" />
+    <!-- color scheme -->
+    <link
+      id="colors"
+      href="{% static 'css/colors/scheme-01.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- custom css -->
+    <link
+      id="colors"
+      href="{% static 'css/custom-bold.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+<style>
+    .section-shape-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: -1;
+}
+@keyframes float-bob-x {
+  0% {
+    transform: translateX(-30px);
+  }
+
+  50% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    transform: translateX(-30px);
+  }
+}
+
+.float-bob-x {
+  -webkit-animation-name: float-bob-x;
+  animation-name: float-bob-x;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
+
+
+</style>
+
+
+</head>
+
+<body>
+
+    {% if project.gtm_id %}
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ project.gtm_id }}"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    {% endif %}
+
+    <div id="wrapper">
+        <a href="#" id="back-to-top"></a>
+        <div class="dot"></div>
+        <div class="cursor-outline"></div>
+
+        <!-- Preloader -->
+        <div id="de-loader"></div>
+
+        <!-- Content -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <!-- Thank You Section -->
+            <section class="calculator bg-dark pt-5 align-content-center position-relative" style="height: 100vh;">
+                <div class="section-shape-1 float-bob-x" style="background-image: url({% static 'images/bg-thankyou.png' %}); filter: brightness(0.4); background-position: left;"></div>
+                <div class="container">
+                    <div class="card-2 box">           
+                            <div class="row justify-content-center align-items-center">
+                                <div class="col-12 col-md-10 col-lg-10">
+                                    <div class="section__content ms-lg-4 text-light text-center pt-4  " id="read">
+                                        <span class="section__content-sub-title headingFour text-2">InvestoInEstates.in</span>
+                                        <h2 class="section__content-title orange mt-3">Thank You
+                                        </h2>
+                                       
+                                        <p class="section__content-text mt-3">
+                                            At InvestorInEstates.in, smart investments and happy homes are our everyday business.
+                                        </p>
+                                        <p class="section__content-text mt-3">
+                                            Whether you're dreaming of buying your first home or planning to make a savvy commercial investment, or looking for the next big real estate opportunity near Jewar Airport or the Yamuna Expressway, we have got you. Our team of real estate experts will be in touch with you soon to figure out exactly what you’re looking for.
+
+                                        </p>
+                                        <p class="section__content-text mt-3">
+                                            We offer honest advice and share handpicked options with you that actually suit you best.
+
+                                            <p class="section__content-text text-md-end mt-3 orange  ">
+                                                Thank You for Reaching Out!
+    
+                                            </p>
+                                        </p>
+
+                                        <a href="/" class="btn_theme btn_theme_active mt-4">Go Home<i
+                                                class="bi bi-arrow-up-right"></i><span></span></a>
+                                               
+
+                                       
+                                    </div>
+                                </div>
+                            </div>
+                       
+                    </div>
+                </div>
+            </section>
+
+        </div>
+        <!-- Javascript Files
+    ================================================== -->
+    <script src="{% static 'js/plugins.js' %}"></script>
+    <script src="{% static 'js/designesia.js' %}"></script>
+    <script src="{% static 'js/swiper.js' %}"></script>
+    <script src="{% static 'js/custom-marquee.js' %}"></script>
+    <script src="{% static 'js/custom-swiper-3.js' %}"></script>
+
+</body>
+
+</html>

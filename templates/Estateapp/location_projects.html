@@ -1,0 +1,331 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+      <!-- content begin -->
+      <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="{% static 'images/background/6.webp' %}" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h1>{{ city.name }} Projects</h1>
+                            <ul class="crumb pt-5 text-center">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">{{ city.name }} Projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-overlay"></div>
+            </section>
+
+
+            <!-- content section -->
+            <section class="cityContent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">{{city.title}}</h2>
+                            <p>{{city.descp}}
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="relative  wow zoomIn" data-wow-delay=".5s">
+                                {% if city.image2 %}
+                                <img class="img-fluid" src="{{city.image2.url}}" alt=""
+                                    style="border-radius: 10px;">
+                                {% else %}
+                                <img class="img-fluid" src="{% static 'images/about/mission.jpg' %}" alt=""
+                                    style="border-radius: 10px;">
+                                {% endif %}
+                                <div class="gradient-trans-black-bottom abs w-100 h-100 "
+                                    style="bottom: 0px; border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- content section end-->
+
+            <section class="pb-80 pt-5">
+              <div class="container">
+                <div class="row g-4">
+                  <div class="col-lg-8 offset-lg-2 text-center">
+                    <h2 class="wow fadeInUp mb-4">Projects in {{ city.name }}</h2>
+                    <div class="subtitle id-color wow fadeInUp pb-3">
+                      Check out some of our listed properties
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-carousel owl-theme" id="featureProject2">
+                  {% for f in projects %}
+                  <!-- item -->
+                  <div class="item">
+                    <div
+                      class="hover relative text-light text-center wow fadeInUp"
+                      data-wow-delay=".3s"
+                    >
+                      {% if f.gallery_images.first.image %}
+                      <img src="{{ f.gallery_images.first.image.url }}" class="w-100" alt="" />
+                      {% endif %}
+                      <div
+                        class="abs hover-op-1 z-4 hover-mt-40 abs-centered text-dark"
+                      >
+                        <div class="fs-14">From</div>
+                        <h3 class="fs-40 lh-1 mb-4 text-dark">{{f.Price}}</h3>
+                        <!-- button -->
+                      <div class="pt-4">
+                        <div class="abs-centered elemt rounded-20 shadow">
+                          <a href="{% url 'projectdetail' f.project_slug %}">
+                            <div class="text-div">
+                              <p>View</p>
+                              <p>View</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                      <div
+                        class="abs bg-light z-2 top-0 w-100 h-100 hover-op-1"
+                      ></div>
+                      <div
+                        class="abs py-3 z-2 bottom-0 w-100 text-center hover-op-0"
+                      >
+                        <h3 class="mb-0">{{f.Title}}</h3>
+                        <div class="text-center fs-16">
+                          <span class="mx-2"> {{f.Address_line1}} </span><br>
+                          <span class="mx-2"> {{f.City}} </span>
+                        </div>
+                      </div>
+                      <div
+                        class="gradient-trans-black-bottom abs w-100 h-100 borR-20"
+                        style="bottom: 10px"
+                      ></div>
+                    </div>
+                  </div>
+                  {% empty %}
+                  <div class="text-center text-danger fs-4 mt-5">No projects available in this city.</div>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+
+            {% if newlaunch_proj %}
+            <section class="pb-80 pt-5">
+              <div class="container">
+                <div class="row g-4">
+                  <div class="col-lg-8 offset-lg-2 text-center">
+                    <h2 class="wow fadeInUp mb-4">Newly Launched Projects in {{ city.name }}</h2>
+                    <div class="subtitle id-color wow fadeInUp pb-3">
+                      Check out some of our listed properties
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-carousel owl-theme" id="featureProject2">
+                  {% for f in newlaunch_proj %}
+                  <!-- item -->
+                  <div class="item">
+                    <div
+                      class="hover relative text-light text-center wow fadeInUp"
+                      data-wow-delay=".3s"
+                    >
+                      {% if f.gallery_images.first.image %}
+                      <img src="{{ f.gallery_images.first.image.url }}" class="w-100" alt="" />
+                      {% endif %}
+                      <div
+                        class="abs hover-op-1 z-4 hover-mt-40 abs-centered text-dark"
+                      >
+                        <div class="fs-14">From</div>
+                        <h3 class="fs-40 lh-1 mb-4 text-dark">{{f.Price}}</h3>
+                        <!-- button -->
+                      <div class="pt-4">
+                        <div class="abs-centered elemt rounded-20 shadow">
+                          <a href="{% url 'projectdetail' f.project_slug %}">
+                            <div class="text-div">
+                              <p>View</p>
+                              <p>View</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                      <div
+                        class="abs bg-light z-2 top-0 w-100 h-100 hover-op-1"
+                      ></div>
+                      <div
+                        class="abs py-3 z-2 bottom-0 w-100 text-center hover-op-0"
+                      >
+                        <h3 class="mb-0">{{f.Title}}</h3>
+                        <div class="text-center fs-16">
+                          <span class="mx-2"> {{f.Address_line1}} </span><br>
+                          <span class="mx-2"> {{f.City}} </span>
+                        </div>
+                      </div>
+                      <div
+                        class="gradient-trans-black-bottom abs w-100 h-100 borR-20"
+                        style="bottom: 10px"
+                      ></div>
+                    </div>
+                  </div>
+                  {% empty %}
+                  <div class="text-center text-danger fs-4 mt-5">No projects available in this city.</div>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+            {% endif %} 
+
+            {% if ready_proj %}
+            <section class="pb-80 pt-5">
+              <div class="container">
+                <div class="row g-4">
+                  <div class="col-lg-8 offset-lg-2 text-center">
+                    <h2 class="wow fadeInUp mb-4">Ready To Move Projects in {{ city.name }}</h2>
+                    <div class="subtitle id-color wow fadeInUp pb-3">
+                      Check out some of our listed properties
+                    </div>
+                  </div>
+                </div>
+                <div class="owl-carousel owl-theme" id="featureProject2">
+                  {% for f in ready_proj %}
+                  <!-- item -->
+                  <div class="item">
+                    <div
+                      class="hover relative text-light text-center wow fadeInUp"
+                      data-wow-delay=".3s"
+                    >
+                      {% if f.gallery_images.first.image %}
+                      <img src="{{ f.gallery_images.first.image.url }}" class="w-100" alt="" />
+                      {% endif %}
+                      <div
+                        class="abs hover-op-1 z-4 hover-mt-40 abs-centered text-dark"
+                      >
+                        <div class="fs-14">From</div>
+                        <h3 class="fs-40 lh-1 mb-4 text-dark">{{f.Price}}</h3>
+                        <!-- button -->
+                      <div class="pt-4">
+                        <div class="abs-centered elemt rounded-20 shadow">
+                          <a href="{% url 'projectdetail' f.project_slug %}">
+                            <div class="text-div">
+                              <p>View</p>
+                              <p>View</p>
+                            </div>
+                          </a>
+                        </div>
+                      </div>
+                      </div>
+                      <div
+                        class="abs bg-light z-2 top-0 w-100 h-100 hover-op-1"
+                      ></div>
+                      <div
+                        class="abs py-3 z-2 bottom-0 w-100 text-center hover-op-0"
+                      >
+                        <h3 class="mb-0">{{f.Title}}</h3>
+                        <div class="text-center fs-16">
+                          <span class="mx-2"> {{f.Address_line1}} </span><br>
+                          <span class="mx-2"> {{f.City}} </span>
+                        </div>
+                      </div>
+                      <div
+                        class="gradient-trans-black-bottom abs w-100 h-100 borR-20"
+                        style="bottom: 10px"
+                      ></div>
+                    </div>
+                  </div>
+                  {% empty %}
+                  <div class="text-center text-danger fs-4 mt-5">No projects available in this city.</div>
+                  {% endfor %}
+                </div>
+              </div>
+            </section>
+            {% endif %}
+
+            <!-- Why Invest in Bengaluru Real Estate? -->
+            <section class="py-5">
+                <div class="container text-center">
+                    <h2>Why Invest in {{city.name}} Real Estate?</h2>
+                    <div class="row pt-5 g-5 ">
+                        <div class="col-lg-6 col-md-6 d-flex flex-column gap-4 ">
+                            <!-- Top Big Card -->
+                            <div class="card2 hover border-0 shadow-sm position-relative overflow-hidden rounded-4">
+                                <img src="{{city.image.url}}" class="card-img hover-scale-1-1  object-fit-cover"
+                                    alt="Rome">
+                            </div>
+
+                            
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <ul class="text-start ps-0">
+                                <li class="wow fadeInUp" data-wow-delay=".3s">
+                                    {{city.why_invest}}
+                                </li>
+                                
+                            </ul>
+                        </div>
+                        <!-- offer end -->
+                    </div>
+                </div>
+            </section>
+            <!-- Why Invest in Bengaluru Real Estate? -->
+            <section class="py-5">
+                <div class="container ">
+                    <h2 class="text-center">Why Choose InvestInEstates for {{city.name}} Property Search?</h2>
+                    <div class="owl-carousel owl-theme features" id="featureProject3">
+
+                        <div class="card p-3"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/broker.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Zero Brokerage</h4>
+                            <p>No agent fees. Direct deals.</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/verified.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4> Verified Listings</h4>
+                            <p>Only legal, RERA-compliant projects</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/advisory.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Personal Advisory</h4>
+                            <p>Based on your goals, not commissions</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/support.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Complete Support </h4>
+                            <p>Site visits, loans, legal, interiors – done for you</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/brand.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Brand Access</h4>
+                            <p> Exclusive tie-ups and insider deals</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/location.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Smart Filters</h4>
+                            <p>Find homes by location, size, budget, possession or brand</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+      </div>
+
+
+
+{% endblock %}

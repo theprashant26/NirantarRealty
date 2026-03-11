@@ -1,0 +1,779 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7T0E5KYJ19"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7T0E5KYJ19');
+  </script>
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-TG84V6N3');</script>
+  <!-- End Google Tag Manager -->
+
+  {% if projj.gtm_id %}
+  <!-- Google Tag Manager -->
+  <script>
+  (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id={{ projj.gtm_id }}'+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','{{ projj.gtm_id }}');
+  </script>
+  <!-- End Google Tag Manager -->
+  {% endif %}
+
+  <title>{{projj.Title}}</title>
+  <link rel="icon" href="{% static 'images/Conscient-Elevate/conscientfavicon.ico' %}" type="image/gif" sizes="16x16" />
+  <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta content="{{projj.Title}}" name="description" />
+  <meta content="" name="keywords" />
+  <meta content="" name="author" />
+  <!-- CSS Files
+    ================================================== -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" id="bootstrap" />
+  <link href="{% static 'css/plugins.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'css/swiper.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'css/coloring.css' %}" rel="stylesheet" type="text/css" />
+  <link rel="canonical" href="{{ request.build_absolute_uri }}" />
+  <!-- color scheme -->
+  <link id="colors" href="{% static 'css/colors/scheme-01.css' %}" rel="stylesheet" type="text/css" />
+  <!-- custom css -->
+  <link id="colors" href="{% static 'css/custom-bold.css' %}" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <!-- SweetAlert2 CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</head>
+
+<body>
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TG84V6N3"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  {% if projj.gtm_id %}
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{ projj.gtm_id }}"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  {% endif %}
+
+  {% load sweetify %}
+    {% sweetify %}
+  <div id="wrapper">
+    <a href="#" id="back-to-top"></a>
+
+    <div class="dot"></div>
+        <div class="cursor-outline"></div>
+
+    <!-- page preloader begin -->
+    <div id="de-loader"></div>
+    <!-- page preloader close -->
+
+    <!-- header begin -->
+    <header class="transparent">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="de-flex sm-pt10">
+              <div class="de-flex-col">
+                <!-- logo begin -->
+                <div id="logo">
+                  <a href="/">
+                      <img class="logo-main" src="{% static 'images/background/invstlogo.png' %}" alt="investinestates" style="width:130px;height:100px;" />
+                      <img class="logo-scroll" src="{% static 'images/background/invstlogo.png' %}" alt="investinestates" style="width:130px;height:100px;" />
+                    </a>
+                </div>
+                <!-- logo close -->
+              </div>
+              <div class="de-flex-col header-col-mid m-auto">
+                <ul id="mainmenu" class="citymenu">
+                  <li><a class="menu-item" href="#content">Home</a></li>
+                  <li>
+                    <a class="menu-item" href="#aboutus">About Us</a>
+                  </li>
+
+                  <li>
+                    <a class="menu-item" href="#highlights">Highlights</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#ameneties">Ameneties</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#features">Features</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#floorplan">Floor Plan</a>
+                  </li>
+                  <li>
+                    <a class="menu-item" href="#location">Location</a>
+                  </li>
+                  <li><a type="button" class="menu-item" data-bs-toggle="modal"
+                      data-bs-target="#contactModal">Contact</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="de-flex-col">
+                <div>
+                  <!-- logo begin -->
+                  <div id="logo" style="display: inline-block;">
+                    <a href="{{projj.get_absolute_url}}">
+                      {% if projj.Proj_Logo %}
+                      <img class="logo-main" src="{{projj.Proj_Logo.url}}" alt="" />
+                      {% else %}
+                      <img class="logo-main" src="{% static 'images/Conscient-Elevate/Conscient-logo.png' %}" alt="" />
+                      {% endif %}
+                      {% if projj.Proj_Logo %}
+                      <img class="logo-scroll" src="{{projj.Proj_Logo.url}}" alt="" />
+                      {% else %}
+                      <img class="logo-scroll" src="{% static 'images/Conscient-Elevate/Conscient-logo.png' %}" alt="" />
+                      {% endif %}
+                      {% if projj.Proj_Logo %}
+                      <img class="logo-mobile" src="{{projj.Proj_Logo.url}}" alt="" />
+                      {% else %}
+                      <img class="logo-mobile" src="{% static 'images/Conscient-Elevate/Conscient-logo.png' %}" alt="" />
+                      {% endif %}
+                    </a>
+                  </div>
+                  <!-- logo close -->
+                  <span id="menu-btn"></span>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- header close -->
+    <!-- content begin -->
+    <div class="no-bottom no-top" id="content">
+      <div id="top"></div>
+
+      <section id="section-intro"
+        class="section-dark text-light no-top no-bottom position-relative overflow-hidden z-1000">
+        <div class="v-center relative">
+          <div class="abs abs-centered centered z-1000 w-100 bottom-0">
+            <div class="container" style="max-width: 1200px; margin: 20px; padding: 0 15px">
+
+              <h2 class="fs-1 C fadeInUp wow" data-wow-delay=".3s">{{projj.Title}}</h2>
+              <h5>{{projj.Address_line1}}</h5>
+              <div class="row p-2">
+                <div class="col-sm-2 col-3 configuration-item">
+                  <h3>Price</h3>
+                  <p>{{projj.Price}}</p>
+                </div>
+                <div class="col-sm-2 col-3 configuration-item">
+                  <h3>Sizes</h3>
+                  <p>{{projj.Size}}</p>
+                </div>
+                <div class="col-sm-3 col-6 configuration-item">
+                  <h3>Configurations</h3>
+                  {% if projj.Configuration.all %}
+                    <ul class="list-unstyled">
+                      {% for config in projj.Configuration.all %}
+                        <li>{{ config }}</li>
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                    <p>No configurations available</p>
+                  {% endif %}
+                </div>
+                <div class="col-sm-2 col-4 configuration-item">
+                  <h3>Status</h3>
+                  <p>{{projj.stage}}</p>
+                </div>
+                <div class="col-sm-2 col-4 configuration-item">
+                  <h3>Rera No.</h3>
+                  <p>{{projj.RERA_No}}</p>
+                </div>
+              </div>
+              <button class="brochure p-3 mt-3 fs-4 fw-600" data-bs-toggle="modal" data-bs-target="#contactModal">
+                Download Floor Plan
+              </button>
+
+            </div>
+          </div>
+
+          <div class="swiper">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                {% if projj.Bann1 %}
+                <div class="swiper-inner"
+                  data-bgimage="url({{projj.Bann1.url}})" style="object-fit: contain;">
+                  <div class="gradient-trans-black-bottom abs w-100 h-100" style="bottom: 0px"></div>
+                </div>
+                {% endif %}
+              </div>
+              <!-- Slides -->
+
+              <!-- Slides -->
+              <div class="swiper-slide">
+                {% if projj.Bann2 %}
+                <div class="swiper-inner"
+                  data-bgimage="url({{projj.Bann2.url}})"  style="object-fit: contain;">
+                  <div class="gradient-trans-black-bottom abs w-100 h-100" style="bottom:0px"></div>
+                </div>
+                {% endif %}
+              </div>
+              <!-- Slides -->
+
+              <!-- Slides -->
+              <div class="swiper-slide">
+                {% if projj.Bann3 %}
+                <div class="swiper-inner"
+                  data-bgimage="url({{projj.Bann3.url}})">
+                  <div class="gradient-trans-black-bottom abs w-100 h-100" style="bottom:0px"></div>
+                </div>
+                {% endif %}
+              </div>
+              <!-- Slides -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about -->
+      <section class="no-top no-bottom overflow-hidden mt-5 pt-1 mb-5" id="aboutus">
+        <div class="container-fluid position-relative half-fluid">
+          <div class="container mt-3">
+            <div class="row g-4">
+              <div class="col-lg-8 offset-lg-2 text-center">
+                <h2 class="wow fadeInUp pb-2 mb-4">
+                  {{projj.Title}} 
+                </h2>
+              </div>
+            </div>
+
+            <div class="row mt-1">
+              <div class="col-lg-6 rounded-20 mission">
+                <div class="relative">
+                  {% with projj.gallery_images.first as image %}
+                    {% if image %}
+                      <div class="image rounded-20 shadow-soft"
+                          data-bgimage="url({{ image.image.url }}) center">
+                      </div>
+                    {% else %}
+                      <div class="image rounded-20 shadow-soft"
+                          data-bgimage="url({% static 'images/default.jpg' %}) center">
+                      </div>
+                    {% endif %}
+                  {% endwith %}
+                  <div class="gradient-trans-black-bottom abs w-100 h-100 borR-20" style="bottom: 0px"></div>
+                </div>
+              </div>
+
+              <div class="col-lg-6">
+                {{projj.About_Content | safe}}
+                <button class="brochure2 p-3 mt-3 fs-4 fw-600 text-orange" data-bs-toggle="modal"
+                  data-bs-target="#contactModal">
+                  Download Floor Plan
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conscient Elevate highlight left-->
+      <section class="no-top no-bottom overflow-hidden mt-5 pt-1 mb-5 icon" id="highlights">
+        <div class="container-fluid position-relative half-fluid">
+          <div class="container mt-3 fadeInUp">
+
+            <div class="row m-1">
+              <!-- Text -->
+              <div class="col-lg-6 visionTXT">
+                <h3 class="wow fadeInUp text-orange text-white p-2" data-wow-delay=".2s">
+                  Highlights
+                </h3>
+                {{projj.get_highlights_as_list | safe}}
+              </div>
+              <!-- Image -->
+              <div class="col-lg-6 rounded-20 mission visionIMG">
+                <div class="relative">
+                  {% with projj.gallery_images.all|slice:"1:2" as second_image_list %}
+                    {% if second_image_list %}
+                      <div class="image rounded-20 shadow-soft"
+                          data-bgimage="url({{ second_image_list.0.image.url }}) center">
+                      </div>
+                    {% else %}
+                      <div class="image rounded-20 shadow-soft"
+                          data-bgimage="url({% static 'images/default.jpg' %}) center">
+                      </div>
+                    {% endif %}
+                  {% endwith %}
+                  <div class="gradient-trans-black-bottom abs w-100 h-100 borR-20" style="bottom: 0px"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Ameneties -->
+      <section id="section-rooms " class="px-2 no-bottom pt30 container price-section mb-5">
+     
+        <div class="container-fluid relative z-2" id="ameneties">
+          <div class="row g-4">
+            <div class="col-lg-8 offset-lg-2 text-center">
+              <h2 class="wow fadeInUp mb-4">
+                 Ameneties
+              </h2>
+              <div class="subtitle id-color wow fadeInUp">
+                Our Ameneties
+              </div>
+            </div>
+          </div>
+          <div class="owl-carousel owl-theme project_Ameneties" id="featureProject">
+            {% for amenity in projj.Amenities.all %}
+              <div class="item">
+                <figure>
+                  <figcaption2>{{ amenity.name }}</figcaption2>
+                  {% if amenity.icon %}
+                    <img src="{{ amenity.icon.url }}" alt="{{ amenity.name }}">
+                  {% else %}
+                    <img src="https://via.placeholder.com/150" alt="No icon">
+                  {% endif %}
+                  <figcaption>{{ amenity.name }}</figcaption>
+                </figure>
+              </div>
+            {% endfor %}
+          </div>          
+        </div>
+      </section>
+
+
+      <!-- APARTMENTS PLAN AREA START -->
+      <div class="ltn__apartments-plan-area pt-115--- pb-70" id="floorplan">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-title-area ltn__section-title-2--- text-center">
+                <h1 class="section-title">Floor Plans And Pricing</h1>
+              </div>
+      
+              <div class="ltn__tab-menu ltn__tab-menu-3 ltn__tab-menu-top-right-- text-uppercase--- text-center">
+                <div class="nav">
+                  {% for plan in floor_plans %}
+                    <a class="{% if forloop.first %}active show{% endif %}" data-bs-toggle="tab" href="#tab_{{ forloop.counter }}">{{ plan.name }}</a>
+                  {% endfor %}
+                </div>
+              </div>
+      
+              <div class="tab-content">
+                {% for plan in floor_plans %}
+                  <div class="tab-pane {% if forloop.first %}active{% endif %} fade animate__animated" id="tab_{{ forloop.counter }}">
+                    <div class="ltn__product-tab-content-inner">
+                      <div class="row">
+                        <div class="col-lg-6" style="display: flex; align-items: center;">
+                          <div class="apartments-plan-info ltn__secondary-bg rounded-4">
+                            <h2>{{ plan.name }}</h2>
+                            <p>This is sample content for {{ plan.name }}. You can update the model to store area, room info, etc.</p>
+                            <!-- Add more plan details if available in model -->
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="apartments-plan-img">
+                            {% if plan.image %}
+                            <img src="{{ plan.image.url }}" alt="{{ plan.name }}" class="img-fluid">
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- APARTMENTS PLAN AREA END -->
+
+      <!-- Features -->
+      <section class="no-top no-bottom overflow-hidden mt-5 pt-1 mb-5" id="features">
+        <div class="container-fluid position-relative half-fluid">
+          <div class="container mt-3">
+            <div class="row mt-1">
+              <div class="col-lg-6 rounded-20 mission">
+                <div class="relative">
+                  {% with projj.gallery_images.all|slice:"2:3" as second_image_list %}
+                    {% if second_image_list %}
+                      <div class="image rounded-20 shadow-soft"
+                          data-bgimage="url({{ second_image_list.0.image.url }}) center">
+                      </div>
+                    {% else %}
+                      <div class="image rounded-20 shadow-soft"
+                          data-bgimage="url({% static 'images/default.jpg' %}) center">
+                      </div>
+                    {% endif %}
+                  {% endwith %}
+                  <div class="gradient-trans-black-bottom abs w-100 h-100 borR-20" style="bottom: 0px"></div>
+                </div>
+              </div>
+              <!-- Text -->
+              <div class="col-lg-6 visionTXT">
+                <h3 class="wow fadeInUp text-orange text-white p-2" data-wow-delay=".2s">
+                  {{projj.Title}} Features
+                </h3>
+                {{projj.Featur_Content | safe}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--  Gallery -->
+      <section id="section-rooms " class="px-2 no-bottom pt30">
+        <div class="container-fluid relative z-2">
+          <div class="row g-4">
+            <div class="col-lg-8 offset-lg-2 text-center">
+              <h2 class="wow fadeInUp mb-4">
+                Gallery
+              </h2>
+            </div>
+          </div>
+          <div class="owl-carousel owl-theme" id="featureProject">
+            <!-- item1 -->
+            {% for image in projj.gallery_images.all %}
+              <div class="item">
+                <div class="hover relative text-light text-center wow fadeInUp" data-wow-delay=".3s">
+                  <img src="{{ image.image.url }}" class="w-100" alt="Gallery Image" />
+
+                  <div class="gradient-trans-black-bottom abs w-100 h-100 borR-20" style="bottom: 10px"></div>
+                </div>
+              </div>
+            {% endfor %}
+
+          </div>
+        </div>
+      </section>
+
+      <!--Conscient Elevate Location Advantage -->
+      <section class="no-top no-bottom overflow-hidden mt-5 pt-1 mb-5 icon" id="location">
+        <div class="container-fluid position-relative half-fluid">
+          <div class="container mt-3">
+            <div class="row mt-1">
+              <div class="col-lg-6 rounded-20">
+                <div class="relative">
+                  <div class="map_bind shadow-soft">
+                    <iframe
+                      src="{{projj.Map_Link}}"
+                      width="800" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                  </div>
+                  <div class="de-overlay rounded-20"></div>
+                </div>
+              </div>
+              <!-- Text -->
+              <div class="col-lg-6 visionTXT pt-3">
+                <h3 class="wow fadeInUp text-orange text-white p-2" data-wow-delay=".2s">
+                  Location Advantage
+                </h3>
+                {{ projj.get_location_as_list|safe }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- our contact -->
+      <section class="contact_us shadow-soft">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 offset-md-1">
+              <div class="contact_inner shadow-soft">
+                <div class="row">
+                  <div class="col-md-10">
+                    <div class="contact_form_inner">
+                      <div class="contact_field">
+                        <h3>Contact Us</h3>
+                        <p>
+                          Feel Free to contact us any time. We will get back
+                          to you as soon as we can!.
+                        </p>
+                        <form action="{% url 'projectdetail' projj.project_slug %}" method="POST">
+                          {% csrf_token %}
+                          <input type="text" name="name" class="form-control form-group" placeholder="Enter Your Name" />
+                          <input type="text" name="email" class="form-control form-group" placeholder="Enter your Mail" />
+                          <input type="text" name="city" class="form-control form-group" placeholder="Enter your City" />
+                          <input type="text" name="mobile" class="form-control form-group" placeholder="Enter your Mobile Number" />
+                          <input type="hidden" name="{{projj.Title}}" value="{{projj.Title}}" />
+                          <button class="contact_form_submit">Send</button>
+                        </form>
+                        
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-2">
+                    <div class="right_conatct_social_icon d-flex align-items-end">
+                      <div class="socil_item_inner d-flex">
+                        <li>
+                          <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-instagram"></i></a>
+                        </li>
+                        <li>
+                          <a href="#"><i class="fab fa-twitter"></i></a>
+                        </li>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="contact_info_sec shadow-soft">
+                  <h4>Project Address</h4>
+                  <div class="info_single align-items-center">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <span>{{projj.Address_line1}}, 
+                      {{projj.City}}, {{projj.Zipcode}}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- about developer-->
+    <section class="no-top no-bottom overflow-hidden mt-5 pt-1 mb-5 icon" id="highlights">
+      <div class="container-fluid position-relative half-fluid">
+        <div class="container mt-3 fadeInUp">
+
+          <div class="row mt-1">
+            <!-- Text -->
+            <div class="col-12 col-lg-6 visionTXT align-content-center">
+              <h3 class="gradient-text"><span >//</span> About Developer</h3>
+              <p>{{projj.Abt_builder}}</p>
+            </div>
+            <!-- Image -->
+            <div class="col-12 col-lg-6 rounded-20  visionIMG">
+              <div class="relative">
+                {% if projj.Bann1 %}
+                <div class="image rounded-20 shadow-soft"
+                  data-bgimage="url({{projj.Bann1.url}}) center">
+                </div>
+                {% endif %}
+                <div class="gradient-trans-black-bottom abs w-100 h-100 borR-20" style="bottom: 0px"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+      <!-- footer begin -->
+      <footer class="mainfooter text-light section-dark no-top relative top-footer">
+        <div class="container">
+          <div class="row g-4 align-items-center">
+            <div class="col-md-12">
+              <div class="d-lg-flex align-items-center justify-content-between text-center">
+                <div>
+                  <h3 class="fs-20">Address</h3>
+                  {{projj.Address_line1}}, <br />
+                  {{projj.City}}, {{projj.Zipcode}}
+                </div>
+                <div>
+                  <img src="{% static 'images/Conscient-Elevate/Conscient-logo.png' %}" class="w-200px" alt="" /><br />
+                  <div class="social-icons mb-sm-30 mt-4 mb-2">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                  </div>
+                </div>
+                <div>
+                  <h3 class="fs-20">Contact Us</h3>
+                  T. +91 9876543210<br />
+                  M. contact@conscientelevate.com
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="subfooter m-0">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12 text-center">
+                Copyright 2024 - Design By Aajneeti
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- footer close -->
+
+      <!-- Modal Structure -->
+       <div class="modal fade menu-item" id="contactModal">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+    
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-bs-dismiss="modal">&times;</button>
+    
+                    {% with projj.gallery_images.all|slice:"1:2" as second_image_list %}
+                      {% if second_image_list %}
+                    <div class="mb-l">
+                        <img src="{{ second_image_list.0.image.url }}" alt="free-demo" />
+                    </div>
+                    {% endif %}
+                    {% endwith %}
+    
+                    <div class="mb-r">
+                        <div class="text-center">
+                          {% if projj.Proj_Logo %}
+                          <img src="{{projj.Proj_Logo.url}}">
+                          {% else %}
+                          <img src="{% static 'images/background/invlogo.png' %}" alt="{{projj.Title}}">
+                          {% endif %}
+
+                            <h2>Send me the Brochure</h2>
+                        </div>
+                        <form action="{% url 'projectdetail' projj.project_slug %}" name='form' method='POST' enctype='multipart/form-data' id='form4'>
+                        {% csrf_token %}
+                            <div class="row g-0">
+                              <!-- <div class="contact_form_inner"> -->
+                                <div class="contact_field">
+                                  <input type="text" name="name" class="form-control form-group" placeholder="Enter Your Name" />
+                                  <input type="text" name="email" class="form-control form-group" placeholder="Enter your Mail" />
+                                  <input type="text" name="city" class="form-control form-group" placeholder="Enter your City" />
+                                  <input type="text" name="mobile" class="form-control form-group" placeholder="Enter your Mobile Number" />
+                                  <button class="contact_form_submit">Send</button>
+                                </div>
+                              <!-- </div> -->
+
+                        </form>
+    
+    
+    
+                        <!-- <a class="m-call" href="tel:+919876543210"><i class="fas fa-phone-alt"></i> <span> +91 9876543210</span></a> -->
+                    </div>
+                    <div class="clear"></div>
+                </div>
+    
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </div>
+  </div>
+
+  <!-- Javascript Files
+    ================================================== -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/circletype@2.3.0/dist/circletype.min.js"></script>
+  <script src="{% static 'js/plugins.js' %}"></script>
+  <script src="{% static 'js/designesia.js' %}"></script>
+  <script src="{% static 'js/swiper.js' %}"></script>
+  <script src="{% static 'js/custom-marquee.js' %}"></script>
+  <script src="{% static 'js/custom-swiper-3.js' %}"></script>
+  <!-- <script src="form.js"></script> -->
+  <script>
+    $(".owl-carousel").owlCarousel({
+      loop: true,
+      autoplay: true,
+      margin: 12,
+      responsiveClass: true,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true,
+        },
+        600: {
+          items: 2,
+          nav: false,
+        },
+        1000: {
+          items: 3,
+          nav: true,
+          loop: true,
+        },
+      },
+    });
+
+    jQuery(document).ready(function ($) {
+      "use strict";
+      // TESTIMONIALS CAROUSEL HOOK
+      $("#customers-testimonials").owlCarousel({
+        loop: true,
+        center: true,
+        items: 3,
+        margin: 0,
+        autoplay: true,
+        autoplayTimeout: 8500,
+        smartSpeed: 450,
+        responsive: {
+          0: {
+            items: 1, // Show 1 item on small screens
+          },
+          768: {
+            items: 2, // Show 2 items on medium screens
+          },
+          1170: {
+            items: 3, // Show 3 items on larger screens
+          },
+        },
+      });
+    });
+    // feature project
+    $("#featureProject").owlCarousel({
+      loop: true,
+      center: true,
+      margin: 10,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 3,
+        },
+        1000: {
+          items: 5,
+        },
+      },
+    });
+  
+  // model
+     setInterval(() => {
+         const modal = new bootstrap.Modal(document.getElementById('contactModal'));
+         modal.show();
+     }, 20000); // 10000 milliseconds = 10 seconds
+
+    document.getElementById('contactModal').addEventListener('hidden.bs.modal', () => {
+    const backdrops = document.querySelectorAll('.modal-backdrop');
+    backdrops.forEach((backdrop) => backdrop.remove());
+    document.body.classList.remove('modal-open'); // Ensure scrolling is re-enabled
+    document.body.style = ""; // Reset any inline styles
+});
+  </script>
+
+
+</body>
+
+</html>

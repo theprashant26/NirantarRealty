@@ -1,0 +1,171 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+            <div id="top"></div>
+
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="{% static 'images/background/6.webp' %}" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h2>Properties in Bengaluru</h2>
+                            <ul class="crumb pt-5 text-center">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">Cities</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-overlay"></div>
+            </section>
+            <!-- content section -->
+            <section class="cityContent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Tech Capital, Premium Lifestyle & Global
+                                Appeal – All in One City</h2>
+                            <p>Bengaluru is one of the most dynamic cities in India with a number of RERA-approved and
+                                thoroughly verified residential and commercial properties you can invest in. Whether
+                                you're looking for premium high-rise apartments, modern office spaces, or well-located
+                                plotted developments, InvestInEstates offers you a handpicked selection of properties
+                                from trusted developers along with zero brokerage, clear pricing, and full legal
+                                transparency.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="relative  wow zoomIn" data-wow-delay=".5s">
+                                <img class="img-fluid" src="{% static 'images/about/mission.jpg' %}" alt=""
+                                    style="border-radius: 10px;">
+                                <div class="gradient-trans-black-bottom abs w-100 h-100 "
+                                    style="bottom: 0px; border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- content section end-->
+
+            <!-- Why Invest in Bengaluru Real Estate? -->
+            <section class="py-5">
+                <div class="container text-center">
+                    <h2>Why Invest in Bengaluru Real Estate?</h2>
+                    <div class="row pt-5 g-5 ">
+                        <div class="col-lg-6 col-md-6 d-flex flex-column gap-4 ">
+                            <!-- Top Big Card -->
+                            <div class="card2 hover border-0 shadow-sm position-relative overflow-hidden rounded-4">
+                                <img src="{% static 'images/background/6.webp' %}" class="card-img hover-scale-1-1  object-fit-cover"
+                                    alt="Rome">
+                            </div>
+
+                            <div class="d-flex gap-4">
+                                <!-- Bottom Left Small Card -->
+                                <div class="card2 border-0 shadow-sm hover position-relative overflow-hidden rounded-4 wow fadeIn"
+                                    data-wow-delay=".5s">
+                                    <img src="{% static 'images/background/4.webp' %}"
+                                        class="card-img hover-scale-1-1 object-fit-cover " alt="New York">
+                                </div>
+
+                                <!-- Bottom Right Small Card -->
+                                <div class="card2 border-0 shadow-sm hover position-relative overflow-hidden rounded-4 wow fadeIn"
+                                    data-wow-delay=".7s">
+                                    <img src="{% static 'images/background/1.webp' %}"
+                                        class="card-img hover-scale-1-1 object-fit-cover" alt="Sydney">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6 col-12">
+                            <ul class="text-start ps-0">
+                                <li class="wow fadeInUp" data-wow-delay=".3s">
+                                    <p class="fs-3 fw-500" style="color: #e59400;">Tech City + Talent Hub + Livability
+                                    </p>
+                                    <p>Bengaluru is called the Silicon Valley of India for a reason. It has a robust
+                                        tech and startup ecosystem. It is home to global IT majors, unicorns, and hosts
+                                        a young, aspirational population. With superior weather, an educated workforce,
+                                        and expanding metro connectivity, the city attracts professionals,
+                                        entrepreneurs, and global investors alike.</p>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-delay=".4s">
+                                    <p class="fs-3 fw-500" style="color: #e59400;">Capital Appreciation + Quality of
+                                        Life</p>
+                                    <p>From Whitefield to Sarjapur, North Bengaluru to Electronic City, infrastructure
+                                        upgrades like the Bengaluru Suburban Railway, Namma Metro expansion, and
+                                        Peripheral Ring Road are the some of the key reasons properties here are seeing
+                                        multifold appreciation year after year. Bengaluru properties offer a blend of
+                                        modern living, work-life convenience, and high rental yields.</p>
+                                </li>
+                                <li class="wow fadeInUp" data-wow-delay=".5s">
+                                    <p class="fs-3 fw-500" style="color: #e59400;">Ideal for End-Users, NRIs & Long-Term
+                                        Investors</p>
+                                    <p>Whether you’re buying your first home, investing in a villa plot, or seeking
+                                        commercial returns, Bengaluru delivers diversified options. We offer a wide
+                                        range of options, including 2BHK smart homes, luxury gated communities,
+                                        tech-park-facing offices, and more.</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- offer end -->
+                    </div>
+                </div>
+            </section>
+            <!-- Why Invest in Bengaluru Real Estate? -->
+            <section class="py-5">
+                <div class="container ">
+                    <h2 class="text-center">Why Choose InvestInEstates for Bengaluru Property Search?</h2>
+                    <div class="owl-carousel owl-theme features" id="featureProject3">
+
+                        <div class="card p-3"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/broker.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Zero Brokerage</h4>
+                            <p>No agent fees. Direct deals.</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/verified.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4> Verified Listings</h4>
+                            <p>Only legal, RERA-compliant projects</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/advisory.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Personal Advisory</h4>
+                            <p>Based on your goals, not commissions</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/support.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Complete Support </h4>
+                            <p>Site visits, loans, legal, interiors – done for you</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/brand.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Brand Access</h4>
+                            <p> Exclusive tie-ups and insider deals</p>
+                        </div>
+
+
+                        <div class="card p-3 text-center"
+                            style="height: 220px; background-color: #f7f7f7; display: flex; align-items: center; justify-content: center;">
+                            <img src="{% static 'images/icons/location.png' %}" alt="" style="width: 70px; padding: 4px 0px;">
+                            <h4>Smart Filters</h4>
+                            <p>Find homes by location, size, budget, possession or brand</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+{% endblock %}

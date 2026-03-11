@@ -1,0 +1,123 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+<!-- content begin -->
+<div class="no-bottom no-top" id="content">
+  <div id="top"></div>
+
+  <section id="subheader" class="relative jarallax text-light">
+    <img
+      src="{% static 'images/blogs/blog1.jpeg' %}"
+      class="jarallax-img"
+      alt=""
+      style="object-fit: contain; object-position: center"
+    />
+    <div class="container relative z-index-1000">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <h1>Blogs</h1>
+          <ul class="crumb pt-5 text-center">
+            <li><a href="/">Home</a></li>
+            <li class="active">Blogs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="de-overlay"></div>
+  </section>
+
+  <section class="relative lines-deco mb-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- offer begin -->
+        <div class="col-lg-4 col-sm-6">
+          <div
+            class="hover relative overflow-hidden text-light wow fadeInUp rounded-20 h-92"
+            data-wow-delay=".2s"
+          >
+            <img
+              src="{% static 'images/blogs/blog2.jpeg' %}"
+              class="w-100 h-100 hover-scale-1-1"
+              alt=""
+            />
+            <div class="abs z-2 bottom-0 w-100 padding20">
+              <h3>Bangalore Metro</h3>
+              <p class="max-line-4">
+                Escape to luxury this weekend with our exclusive 20% off deal!
+                🌟 Enjoy stunning views, gourmet dining, and relaxing spa
+                treatments. Book now and make your weekend unforgettable!
+              </p>
+              <p style="float: right">~12jan,2024</p>
+              <a class="btn-main" href="#">Read More</a>
+            </div>
+            <div
+              class="overlay-gradient-dark-bottom abs w-100 h-80 bottom-0"
+            ></div>
+          </div>
+        </div>
+        <!-- offer end -->
+
+        <!-- offer begin -->
+        <div class="col-lg-4 col-sm-6">
+          <div
+            class="hover relative overflow-hidden text-light wow fadeInUp rounded-20 h-92"
+            data-wow-delay=".3s"
+          >
+            <img
+              src="{% static 'images/blogs/blog3.jpeg' %}"
+              class="w-100 hover-scale-1-1 h-100"
+              alt=""
+            />
+            <div class="abs z-2 bottom-0 w-100 padding20">
+              <h3>Tech World</h3>
+              <p class="max-line-4">
+                "Family fun awaits! Book our Family Package and enjoy free
+                breakfast for kids, access to the kids' club, and a special
+                welcome gift. Create memories that last a lifetime at our
+                family-friendly hotel. 👨‍👩‍👧‍👦
+              </p>
+              <p style="float: right">~12jan,2024</p>
+              <a class="btn-main" href="#">Read More</a>
+            </div>
+            <div
+              class="overlay-gradient-dark-bottom abs w-100 h-80 bottom-0"
+            ></div>
+          </div>
+        </div>
+        <!-- offer end -->
+
+        <!-- offer begin -->
+        <div class="col-lg-4 col-sm-6">
+          <div
+            class="hover relative overflow-hidden text-light wow fadeInUp rounded-20 h-92"
+            data-wow-delay=".6s"
+          >
+            <img
+              src="{% static 'images/blogs/blog4.jpeg' %}"
+              class="w-100 hover-scale-1-1 h-100"
+              alt=""
+            />
+            <div class="abs z-2 bottom-0 w-100 padding20">
+              <h3>CityOfTech</h3>
+              <p class="max-line-4">
+                Surprise your loved one with a romantic escape! Our Romance
+                Package includes a candlelit dinner, champagne on arrival, and a
+                couples' massage. Book your dream getaway today! ❤️
+              </p>
+              <p style="float: right">~12jan,2024</p>
+              <a class="btn-main" href="#">Read More</a>
+            </div>
+            <div
+              class="overlay-gradient-dark-bottom abs w-100 h-80 bottom-0"
+            ></div>
+          </div>
+        </div>
+        <!-- offer end -->
+
+      </div>
+    </div>
+  </section>
+  
+</div>
+<!-- content close -->
+
+{% endblock %}

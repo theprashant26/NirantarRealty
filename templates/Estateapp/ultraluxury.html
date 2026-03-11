@@ -1,0 +1,57 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+        <!-- content begin -->
+        <div class="no-bottom no-top" id="content">
+
+            <div id="top"></div>
+
+            <section id="subheader" class="relative jarallax text-light">
+                <img src="{% static 'images/background/6.webp' %}" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-8 text-center">
+                            <h1>Ultra Luxury Properties</h1>
+                            <ul class="crumb pt-5 text-center">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">Ultra Luxury Properties</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-overlay"></div>
+            </section>
+
+            <section class="relative lines-deco mb-5">
+                <div class="container">
+                    <div class="row g-4">
+                        {% for u in ultra %}
+                        <!-- room begin -->
+                        <div class="col-lg-4 col-sm-6">
+                            <div class="bg-light hover relative text-center wow fadeInUp" data-wow-delay=".3s">
+                                <div class="relative overflow-hidden rounded-10 shadow-soft">
+                                    <div class="abs z-2 w-100 text-center mt-4">
+                                        <h3 class="mb-0 fs-4  hover-scale-1-1 p-color fw-600">{{u.Title}}</h3>
+                                        <h3 class=" text-light fs-14">{{u.Address_line1}}</h3>
+                                    </div>
+                                    <div class="absolute mb-0 start-0 w-100 abs-end fs-36 text-white text-center z-2">
+                                        <h6 class="mb-0 hover-scale-in-2 p-color">{{u.Configuration}}</h6>
+                                        <h6 class="mb-0 hover-scale-in-2 p-color">{{u.Price}}</h6>
+                                        <button class="mb-0 hover-scale-in-2 p-color mt-2 fs-6 brochure p-1 fw-600" style="border:none"><a href="{% url 'projectdetail' u.project_slug %}">view</a></button>
+                                    </div>
+
+                                    {% if u.gallery_images.first.image %}
+                                    <img src="{{ u.gallery_images.first.image.url }}" class="img-fluid hover-scale-1-2" alt="" style="height: 300px !important; ">
+                                    {% endif %}
+                                    <div class="gradient-trans-black-bottom abs w-100 h-100 " style="bottom: 0px;"></div>
+                                </div>
+                               
+                            </div>
+                        </div>
+                        <!-- room end -->
+                        {% endfor %}
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- content close -->
+{% endblock %}

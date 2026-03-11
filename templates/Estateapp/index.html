@@ -1,0 +1,676 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+<!-- content begin -->
+<div class="no-bottom no-top" id="content">
+  <div id="top"></div>
+
+  <section
+    id="section-intro"
+    class="section-dark text-light no-top no-bottom position-relative overflow-hidden z-1000"
+  >
+    <div class="v-center relative">
+      <div class="abs abs-centered z-1000 w-100 mt-5">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-12 text-center justify-content-center">
+              <h1
+                class="fs-96 fs-sm-15vw mb-0 wow fadeInUp"
+                data-wow-delay=".3s"
+              >
+              Invest in Elegance, <br />Live in Comfort
+              </h1>
+              <p class="fadeInUp" data-wow-delay=".6s">
+                Explore the best luxury properties in the market with us.
+              </p>
+            </div>
+            <div class="menu_side_area d-flex justify-content-center">
+              <a href="{% url 'location' %}" class="btn-main btn-line"
+                >Choose Your Luxury</a
+              >
+              <!-- <span id="menu-btn"></span> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="swiper">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div
+              class="swiper-inner"
+              data-bgimage="url({% static 'images/background/rban1.png' %})"
+            >
+              <div class="sw-overlay op-2"></div>
+            </div>
+          </div>
+          <!-- Slides -->
+
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div
+              class="swiper-inner"
+              data-bgimage="url({% static 'images/background/rban2.png' %})"
+            >
+              <div class="sw-overlay op-2"></div>
+            </div>
+          </div>
+          <!-- Slides -->
+
+          <!-- Slides -->
+          <div class="swiper-slide">
+            <div
+              class="swiper-inner"
+              data-bgimage="url({% static 'images/background/rban3.png' %})"
+            >
+              <div class="sw-overlay op-2"></div>
+            </div>
+          </div>
+          <!-- Slides -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- who we are -->
+  <section class="relative" style="padding-top: 75px">
+    <div class="container">
+      <div class="row gx-5 align-items-center">
+        <div class="col-lg-6">
+          <h2 class="wow fadeInUp" data-wow-delay=".2s">Invest in Elegance, Live in Comfort</h2>
+          <p>
+            At Paarth Promoters Realty, we go beyond conventional real estate listings. We are one of the leading real estate consultant companies in Noida, offering expert advice, verified properties, and unmatched service. Founded by Bhavya Sabikhi, an industry professional with more than a decade of experience working with some of the most reputed builders, Paarth Promoters Realty has emerged as a trusted name among real estate advisory firms in Noida.
+          </p>
+          <p>As a full-service real estate advisory company, we specialise in residential and commercial properties across Noida, Greater Noida, and Yamuna Expressway. From assisting first-time home buyers to offering end-to-end property management, our mission is to help you make informed decisions in today’s dynamic real estate industry in India.</p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="row g-4">
+            <div class="col-6">
+              <img
+                src="{% static 'images/about/about1.jpeg' %}"
+                class="img-fluid mb-3 wow zoomIn rounded-20 w-100 h-25 shadow-soft"
+                alt=""
+              />
+              <div class="col-12 text-center">
+                <img
+                  src="{% static 'images/about/h1.png' %}"
+                  class="img-fluid wow zoomIn rounded-20 w-100 h-100 shadow-soft"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="spacer-single sm-hide"></div>
+              <div class="col-12 text-center">
+                <img
+                  src="{% static 'images/about/h2.png' %}"
+                  class="img-fluid wow zoomIn rounded-20 w-100 h-100 shadow-soft"
+                  alt=""
+                />
+              </div>
+              <img
+                src="{% static 'images/about/h3.png' %}"
+                class="img-fluid mt-3 wow zoomIn rounded-20 w-100 h-25 shadow-soft"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="pt20 px-3">
+    <div class="container-fluid">
+      <h2 class="text-dark text-center mt-4">Discover Refined Elegance</h2>
+      <div class="row g-2">
+        <div class="col-lg-4 borR-20">
+          <div class="bg-color-3 relative hover overflow-hidden borR-20">
+            <div
+              class="absolute z-2 w-100 h-100 padding30 hover-op-1 hover-mt-40"
+            >
+              <h4 style="color: #fff">Luxury</h4>
+              <p style="color: #fff">
+                Discover luxury properties across Noida’s prime sectors, including villas, penthouses, and high-rise residences with premium amenities, strategic locations, and high appreciation potential—perfect for refined living and long-term investment.
+              </p>
+              <a class="btn-main" href="{% url 'luxury' %}">Know more</a>
+            </div>
+            <div class="text-center">
+              <img
+                src="{% static 'images/background/luxury.png' %}"
+                class="w-100 img-height"
+                alt=""
+              />
+            </div>
+            <div class="abs abs-center z-1 text-light bottom-0 mb-4">
+              <h3>Luxury</h3>
+            </div>
+            <div
+              class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"
+            ></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 borR-20">
+          <div class="bg-color-3 relative hover overflow-hidden borR-20">
+            <div
+              class="absolute z-2 w-100 h-100 padding30 hover-op-1 hover-mt-40"
+            >
+              <h4 style="color: #fff">Ultra Luxury</h4>
+              <p style="color: #fff">
+                Our ultra-luxury listings include spacious apartments, villas, and penthouses across top sectors in Noida like 94, 128, 153, and 150. Let us guide your journey into luxury property investment. 
+              </p>
+              <a class="btn-main" href="{% url 'ultraluxury' %}">Know more</a>
+            </div>
+            <div class="text-center">
+              <img
+                src="{% static 'images/background/ultralux.png' %}"
+                class="w-100 img-height"
+                alt=""
+              />
+            </div>
+            <div class="abs abs-center z-1 text-light bottom-0 mb-4">
+              <h3>Ultra Luxury</h3>
+            </div>
+            <div
+              class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"
+            ></div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 borR-20">
+          <div class="bg-color-3 relative hover overflow-hidden borR-20">
+            <div
+              class="absolute z-2 w-100 h-100 padding30 hover-op-1 hover-mt-40"
+            >
+              <h4 style="color: #fff">Premium</h4>
+              <p style="color: #fff">
+                We connect you with the best residential and commercial deals from new launches to ready-to-move properties. Whether you're looking for a second home or a future-focused investment, we’ve got you covered.
+              </p>
+              <a class="btn-main" href="{% url 'premium' %}">Know more</a>
+            </div>
+            <div class="text-center">
+              <img
+                src="{% static 'images/background/premiumm.png' %}"
+                class="w-100 img-height"
+                alt=""
+              />
+            </div>
+            <div class="abs abs-center z-1 text-light bottom-0 mb-4">
+              <h3>Premium</h3>
+            </div>
+            <div
+              class="gradient-trans-color-bottom abs w-100 h-40 bottom-0"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- features projects -->
+  <section id="section-rooms" class="px-3 no-bottom pt40 pb-5">
+    <div class="container-fluid relative z-2">
+      <div class="row g-4">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <h2 class="wow fadeInUp mb-4">Featured Projects</h2>
+          <div class="subtitle id-color wow fadeInUp">
+            Check out some of our listed properties
+          </div>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme" id="featureProject">
+        {% for f in featured_proj %}
+        <!-- item1 -->
+        <div class="item">
+          <div
+            class="hover relative text-light text-center wow fadeInUp"
+            data-wow-delay=".3s"
+          >
+            {% if f.gallery_images.first.image %}
+            <img
+              src="{{ f.gallery_images.first.image.url }}"
+              class="w-100"
+              alt=""
+            />
+            {% endif %}
+            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered text-dark">
+              <div class="fs-14">From</div>
+              <h3 class="fs-40 lh-1 mb-4 text-dark">{{f.Price}}</h3>
+              <!-- button -->
+              <div class="pt-4">
+                <div class="abs-centered elemt rounded-20 shadow">
+                  <a href="{% url 'projectdetail' f.project_slug %}">
+                    <div class="text-div">
+                      <p>View</p>
+                      <p>View</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="abs bg-light z-2 top-0 w-100 h-100 hover-op-1"></div>
+            <div class="abs py-3 z-2 bottom-0 w-100 text-center hover-op-0">
+              <h3 class="mb-0">{{f.Title}}</h3>
+              <div class="text-center fs-16">
+                <span class="mx-2"> {{f.Address_line1}} </span><br />
+                <span class="mx-2"> {{f.City}} </span>
+              </div>
+            </div>
+            <div
+              class="gradient-trans-black-bottom abs w-100 h-100 borR-20"
+              style="bottom: 10px"
+            ></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ongoing projects -->
+  <section id="ongoing-rooms" class="px-3 no-bottom pt40">
+    <div class="container-fluid relative z-2">
+      <div class="row g-4">
+        <div class="col-lg-8 offset-lg-2 text-center">
+          <h2 class="wow fadeInUp mb-4">Ongoing Projects</h2>
+          <div class="subtitle id-color wow fadeInUp">
+            Check out some of our listed properties
+          </div>
+        </div>
+      </div>
+      <div class="owl-carousel owl-theme" id="featureProject">
+        {% for o in under_cons_proj %}
+        <!-- item1 -->
+        <div class="item">
+          <div
+            class="hover relative text-light text-center wow fadeInUp"
+            data-wow-delay=".3s"
+          >
+            {% if o.gallery_images.first.image %}
+            <img
+              src="{{ o.gallery_images.first.image.url }}"
+              class="w-100"
+              alt=""
+            />
+            {% endif %}
+            <div class="abs hover-op-1 z-4 hover-mt-40 abs-centered text-dark">
+              <div class="fs-14">From</div>
+              <h3 class="fs-40 lh-1 mb-4 text-dark">{{o.Price}}</h3>
+              <!-- button -->
+              <div class="pt-4">
+                <div class="abs-centered elemt rounded-20 shadow">
+                  <a href="{% url 'projectdetail' o.project_slug %}">
+                    <div class="text-div">
+                      <p>View</p>
+                      <p>View</p>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="abs bg-light z-2 top-0 w-100 h-100 hover-op-1"></div>
+            <div class="abs py-3 z-2 bottom-0 w-100 text-center hover-op-0">
+              <h3 class="mb-0">{{o.Title}}</h3>
+              <div class="text-center fs-16">
+                <span class="mx-2"> {{o.Address_line1}} </span><br />
+                <span class="mx-2"> {{o.City}} </span>
+              </div>
+            </div>
+            <div
+              class="gradient-trans-black-bottom abs w-100 h-100 borR-20"
+              style="bottom: 10px"
+            ></div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <!-- content section -->
+            <section class="cityContent">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h2 class="wow fadeInUp" data-wow-delay=".3s">Why Work With Us?</h2>
+                            <p><strong>No Brokerage Fees</strong> – We do not charge you any brokerage fees. It means you save 3–5% straight on your property purchase price.</p>
+                            <p><strong>Cost Advantage</strong> – We have transparent pricing with no hidden commissions. Once you choose us as your consultants, we work FOR you, and your interests become our priorities.</p>
+                            <p><strong>End-to-End Solutions</strong> – Buying a home can be a complicated and overwhelming process. We help you at every stage – right from property search to finding a home loan to getting legal help to getting interiors done – right up to possession.</p>
+
+                            <p><strong>We Don’t Just Sell Homes; We Simplify Homeownership for Our Clients.</strong></p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="relative  wow zoomIn" data-wow-delay=".5s">
+                                <img class="img-fluid" src="{% static 'images/about/mission.jpg' %}" alt=""
+                                    style="border-radius: 10px;">
+                                <div class="gradient-trans-black-bottom abs w-100 h-100 "
+                                    style="bottom: 0px; border-radius: 10px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- content section end-->
+
+  <!-- Builders -->
+  <section class="no-top relative text-light p-5">
+    <div class="container-fluid p-1">
+      <h2 class="text-dark text-center mt-3">Our Builder</h2>
+      <p class="text-dark text-center mt-3">We partner with 25+ reputed developers across NCR to offer curated options. From property development consulting to property sales advisory, our team ensures every listing is verified, high-potential, and future-ready.</p>
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <!-- builder2 -->
+          <div class="text-center justify-content-center">
+            <div class="wrapper">
+              <div class="itemLeft item1">
+                <img
+                  src="{% static 'images/icons/crc.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemLeft item2">
+                <img
+                  src="{% static 'images/icons/godrej-properties.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemLeft item3">
+                <img src="{% static 'images/icons/acelogo.png' %}" alt="" />
+              </div>
+              <div class="itemLeft item4">
+                <img
+                  src="{% static 'images/icons/gaurs.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemLeft item5">
+                <img src="{% static 'images/icons/l&t.png' %}" alt="" />
+              </div>
+              <div class="itemLeft item6">
+                <img
+                  src="{% static 'images/icons/m3m.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemLeft item7">
+                <img src="{% static 'images/icons/max.png' %}" alt="" />
+              </div>
+              <div class="itemLeft item8">
+                <img
+                  src="{% static 'images/icons/prestige.png' %}"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="wrapper">
+              <div class="itemRight item1">
+                <img
+                  src="{% static 'images/icons/sobha.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemRight item2">
+                <img
+                  src="{% static 'images/icons/godrej-properties.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemRight item3">
+                <img src="{% static 'images/icons/acelogo.png' %}" alt="" />
+              </div>
+              <div class="itemRight item4">
+                <img
+                  src="{% static 'images/icons/gaurs.png' %}"
+                  alt=""
+                />
+              </div>
+              <div class="itemRight item5">
+                <img src="{% static 'images/icons/prestige.png' %}" alt="" />
+              </div>
+              <div class="itemRight item6">
+                <img
+                  src="{% static 'images/icons/l&t.png' %}"
+                  alt="" 
+                />
+              </div>
+              <div class="itemRight item7">
+                <img src="{% static 'images/icons/m3m.png' %}" alt="" />
+              </div>
+              <div class="itemRight item8">
+                <img
+                  src="{% static 'images/icons/max.png' %}"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- testimonial -->
+  <section class="jarallax testi spacer" style="padding: 50px; background-color:antiquewhite">
+    
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- play now -->
+
+        <div class="col-lg-8 col-6">
+          <div class="subtitle wow fadeInUp">// Testimonials</div>
+
+          <h2 class="wow fadeInUp fs-1" data-wow-delay=".2s">
+            Our Happy Customers
+          </h2>
+        </div>
+      </div>
+
+      <div class="testimonials p-0">
+        <div class="row">
+          <div class="col-sm-12 col-12">
+            <div id="customers-testimonials" class="owl-carousel">
+              <!--TESTIMONIAL  -->
+              {% for t in testi %}
+              <div class="item">
+                <div class="icon">
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+                <p>
+                  {{t.content}}
+                </p>
+                <div class="icon">
+                  <i class="fa fa-quote-right" aria-hidden="true"></i>
+                </div>
+                <div class="profile">
+                  <div class="information">
+                    <p>{{t.name}}</p>
+                    <span>{{t.designation}}</span>
+                  </div>
+                </div>
+              </div>
+              {% endfor %}
+              <!--END OF TESTIMONIAL  -->
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END OF TESTIMONIALS -->
+
+  <!-- contact form -->
+  <div
+    class="top-footer padding de-overlay"
+    style="
+      background-image: url({% static 'images/background/rban3.png' %});
+      object-fit: cover;
+      object-position: center;
+    "
+  >
+    <div class="container">
+      <div class="row justify-content-between align-items-center">
+        <div class="col-md-5 col-lg-4">
+          <div class="location-detail">
+            <h4>Location Details</h4>
+            <div class="location-item">
+              <h5>Address</h5>
+              <p>
+                Tower A, Office No.-1510, ATS Bouquet, Sector 132, Noida, Uttar Pradesh
+              </p>
+            </div>
+            <div class="location-item">
+              <h5>Phone</h5>
+              <p><a href="tel:+919711331371">+91 9711331371</a></p>
+            </div>
+            <div class="location-item">
+              <h5>Email</h5>
+              <p>
+                <a href="mailto:info@investinestates.in"
+                  >info@investinestates.in</a
+                >
+              </p>
+            </div>
+            <div class="location-item">
+              <h5>Working Hours</h5>
+              <p>Monday - Saturday</p>
+              <p>10:00 AM - 07:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-lg-5">
+          <div class="form-footer">
+            <h4>Leave Your Details Here</h4>
+            <p style="color:#fff">Interested in property development, property marketing, or investing in residential real estate? Looking for a personal property manager or buying a pre-leased commercial space? Let’s connect!</p>
+            <form action="{% url 'contact' %}" method="post" name="form" autocomplete="off">
+              {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="name"
+                      placeholder="Full Name"
+                      required
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      name="email"
+                      placeholder="Email ID"
+                      required
+                      pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      class="form-control"
+                      name="mobile"
+                      placeholder="Mobile"
+                      required
+                      pattern="[0-9]{10}"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control"
+                      name="message"
+                      placeholder="Message"
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  <button
+                    type="submit"
+                    name="submit"
+                    value="submit"
+                    class="btn2"
+                  >
+                    <!-- <span></span>
+                          <span></span>
+                          <span></span>
+                          <span></span> -->
+                    SEND MESSAGE
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- contact form end-->
+
+  <!-- other projects -->
+  <section class="jarallax d-none">
+    <img
+      src="{% static 'images/background/gradient-2.webp' %}"
+      class="jarallax-img"
+      alt=""
+    />
+    <div class="container mb-48">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-8 col-8">
+          <div class="subtitle wow fadeInUp mb-3">// Explore</div>
+
+          <h2 class="wow fadeInUp" data-wow-delay=".2s">Other Project</h2>
+        </div>
+        <div class="col-lg-4 text-lg-end col-4 cirbutton">
+          <a
+            class="circle-button text-center text-dark wow fadeInLeft"
+            href="{% url 'projects' %}"
+            >More Projects</a
+          >
+        </div>
+      </div>
+
+      <div class="row g-custom-4">
+        {% for city, projects in city_projects.items %}
+          <div class="col-md-6 wow fadeInUp">
+            <div class="accordion secondary">
+              <div class="accordion-section">
+                
+                <div class="accordion-section-title" data-tab="#accordion-{{ forloop.counter }}">
+                  {{ city.name }} Projects
+                </div>
+                <div class="accordion-section-content" id="accordion-{{ forloop.counter }}">
+                  <ul>
+                    {% for proj in projects %}
+                      <li>
+                        <a href="{% url 'projectdetail' slug=proj.project_slug %}" target="_blank" title="{{ proj.Title }}">
+                          {{ proj.Title }}
+                        </a>
+                      </li>
+                    {% endfor %}
+                  </ul>
+                </div>
+      
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      
+    </div>
+  </section>
+  <!-- testing section -->
+  {% endblock %}
+</div>

@@ -1,0 +1,342 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+<!-- content begin -->
+<div class="no-bottom no-top" id="content">
+
+    <div id="top"></div>
+    <section id="subheader" class="relative jarallax text-light">
+        <img src="{% static 'images/background/6.webp' %}" class="jarallax-img" alt="">
+        <div class="container relative z-index-1000">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h1>Area Converter: Conversion Calculator</h1>
+                </div>
+                <ul class="crumb pt-5 text-center">
+                    <li><a href="/">Home</a></li>
+                    <li class="active">Conversion Calculator</li>
+                </ul>
+            </div>
+        </div>
+        <div class="de-overlay"></div>
+    </section>
+
+    
+
+    <!-- section begin -->
+
+    <!-- Calculator start -->
+    <section class="calculator section bg-dark pb-80">
+        <div class="container">
+            <div class="row gy-5 gy-xl-0 justify-content-between align-items-center">
+                <div class="col-12 col-lg-6 col-xxl-5 mx-auto mx-lg-0">
+                    <div class="calculator-input">
+                        <div class="card card--custom calc p-3">
+                            <h3 class="text-start wow fadeInLeft orange fw-bold" data-wow-duration="0.8s">
+                                Calculator
+                            </h3>
+                            <div class="card--custom__loan">
+                                <div class="card--custom__form">
+                                    <form>
+                                        <div class="row gy-5 gy-md-0">
+                                            <div class="col-12 col-md-6">
+                                                <h5 class="calculator__title">From</h5>
+                                                <div class="calculate__form-part">
+                                                    <div class="input-single">
+
+                                                        <select class="form-control2" name="toUnit" id="toUnit">
+                                                            <option value="sq_meter">Square Meter</option>
+                                                            <option value="sq_kilometer">Square Kilometer
+                                                            </option>
+                                                            <option value="sq_foot">Square Feet</option>
+                                                            <option value="sq_yard">Square Yard</option>
+                                                            <option value="acre">Acre</option>
+                                                            <option value="hectare">Hectare</option>
+                                                            <option value="hectare">Bigha</option>
+                                                            <option value="hectare">Cent</option>
+                                                            <option value="hectare">Centimeter</option>
+                                                            <option value="hectare">Millimetre</option>
+                                                            <option value="hectare">Inches</option>
+                                                            <option value="hectare">Meter</option>
+                                                            <option value="hectare">Kilometer</option>
+                                                            <option value="hectare">Yard</option>
+                                                            <option value="hectare">Marla</option>
+                                                            <option value="hectare">Kanal</option>
+                                                            <option value="hectare">Guntha</option>
+                                                        </select>
+                                                    </div>
+
+                                                    <input type="number" placeholder="$0">
+
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <h5 class="calculator__title">To</h5>
+                                                <div class="calculate__form-part">
+
+                                                    <div class="input-single">
+
+                                                        <select class="form-control2" name="toUnit" id="toUnit">
+                                                            <option value="sq_meter">Square Meter</option>
+                                                            <option value="sq_kilometer">Square Kilometer
+                                                            </option>
+                                                            <option value="sq_foot">Square Feet</option>
+                                                            <option value="sq_yard">Square Yard</option>
+                                                            <option value="acre">Acre</option>
+                                                            <option value="hectare">Hectare</option>
+                                                            <option value="hectare">Bigha</option>
+                                                            <option value="hectare">Cent</option>
+                                                            <option value="hectare">Centimeter</option>
+                                                            <option value="hectare">Millimetre</option>
+                                                            <option value="hectare">Inches</option>
+                                                            <option value="hectare">Meter</option>
+                                                            <option value="hectare">Kilometer</option>
+                                                            <option value="hectare">Yard</option>
+                                                            <option value="hectare">Marla</option>
+                                                            <option value="hectare">Kanal</option>
+                                                            <option value="hectare">Guntha</option>
+                                                        </select>
+                                                    </div>
+                                                    <input type="number" placeholder="$0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <span id="CalcMsg"></span>
+                                        <button  style="margin-top: 40px;"
+                                            class="btn_theme btn_theme_active" > 
+                                            Convert <i class="bi bi-arrow-up-right"></i><span></span>
+                                        </button>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="section__content ms-lg-4 ms-xxl-0 text-light" id="read">
+                        <span class="section__content-sub-title headingFour wow fadeInDown"
+                            data-wow-duration="0.8s"><img src="{% static 'images/filled-32.png' %}" alt="vector" />
+                            Calculators</span>
+                        <h2 class="section__content-title wow fadeInUp orange" data-wow-duration="0.8s">
+                            Area Conversion Calculator?
+                        </h2>
+                        <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s">
+                            When you purchase a piece of land or a housing property, you’re required to pay
+                            according to the measurement of its area. The area of a property can be measured in
+                            various units, including square feet, square meters, yards, hectares, and acres,
+                            among others.
+                        </p>
+                        <p class="section__content-text wow fadeInDown" data-wow-duration="0.8s">
+                            When you purchase a piece of land or a housing property, you’re required to pay
+                            according to the Sometimes, the area of a property can be listed in a different
+                            unit, but you may need to convert it to a different unit for the calculation of the
+                            property cost, stamp duty, and registration charges.
+                        </p>
+
+                        <a href="#convrt" class="btn_theme btn_theme_active mt_40 wow fadeInDown"
+                            data-wow-duration="0.8s">Explore More<i
+                                class="bi bi-arrow-up-right"></i><span></span></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="pt-5 calDis wow fadeInUp" data-wow-duration="0.8s"><span>Disclaimer:</span> The aforementioned values, calculations and results
+                are for illustrative and informational purposes only and may vary basis various parameters laid
+                down.</p>
+        </div>
+    </section>
+    <!-- Calculator end -->
+    <!-- section close -->
+
+    <section class="pb-80">
+        <div class="container text-center align-items-center justify-content-center">
+            <h2 class="wow fadeInUp" data-wow-duration="3 s"> How to use a Land Area Conversion Calculator Online?</h2>
+            <p class="wow fadeInUp" data-wow-duration="0.8s">An area converter or land converter is easy to use. You can simply access an online area
+                converter and convert your property’s area into different units within a few seconds. Below are
+                the steps to use land area unit converter</p>
+            <div>
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="cardConversion wow fadeInUp" data-wow-duration="0.8s">
+                            <div class="row">
+                                <div class="col-12 align-items-center justify-content-center"
+                                    style="padding: 10px 0px;"><span class="f-40">1</span> <span
+                                        class="fs-3">Select area unit</span></div>
+                                <div class="col-12">
+                                    <p class="pt-3 pb-0">Choose the original area unit from the first dropdown
+                                        list of our land area converter.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="cardConversion wow fadeInUp" data-wow-duration="0.9s">
+                            <div class="row">
+                                <div class="col-12 align-items-center justify-content-center" style="padding: 10px 0px;"><span
+                                        class="f-40">2</span> <span class="fs-3">Desired area unit</span></div>
+                                <div class="col-12">
+                                    <p class="pt-3 pb-0">From the next dropdown list of our area converter,
+                                        choose the desired area unit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="cardConversion wow fadeInUp" data-wow-duration="1s">
+                            <div class="row">
+                                <div class="col-12 align-items-center justify-content-center"
+                                    style="padding: 10px 0px;"><span class="f-40">3</span> <span
+                                        class="fs-3">Conversion value</span></div>
+                                <div class="col-12">
+                                    <p class="pt-3 pb-0">Enter the area value that you need to convert.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3">
+                        <div class="cardConversion wow fadeInUp" data-wow-duration="2s">
+                            <div class="row">
+                                <div class="col-12 align-items-center justify-content-center"
+                                    style="padding: 10px 0px;"><span class="f-40">4</span> <span
+                                        class="fs-3">Calculate result</span></div>
+
+                                <div class="col-12">
+                                    <p class="pt-3 pb-0">Once you enter the area value in the original area
+                                        unit, our area converter will instantly calculate and display the area
+                                        value of the desired unit.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="tableSection bg-dark text-light pb-80" id="convrt">
+        <div class="background-layer"></div>
+        <div class="container tableContainer">
+          <div class="Tabledetails pb-4">
+            <h1>Area Converter Table</h1>
+            <p>
+              An area conversion calculator works as per the relation between the two
+              units of land area. For example, if you want to convert inches to
+              square feet, you are required to multiply the area in square inches by
+              0.00694.
+            </p>
+            <p>
+              Below is the area conversion table depicting the relations between
+              various area units:
+            </p>
+          </div>
+      
+          <!-- Scrollable Table -->
+          <div class="table-responsive">
+            <table class="text-light" id="style-3">
+              <thead style="position: sticky; top: 0px;">
+                <tr>
+                  <th>Area Unit Conversion</th>
+                  <th>Symbol</th>
+                  <th>Relation</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- Your old data rows -->
+                <tr>
+                  <td>Square Inches to Square Feet</td>
+                  <td>sq in to sq ft</td>
+                  <td>1 square inch = 0.00694 square feet</td>
+                </tr>
+                <tr>
+                  <td>Square Meters to Square Yards</td>
+                  <td>sq m to sq yd</td>
+                  <td>1 square meter = 1.19 square yard</td>
+                </tr>
+                <tr>
+                  <td>Square Meter to Gaj</td>
+                  <td>sq ft to ac</td>
+                  <td>1 square feet = 0.000022 acre</td>
+                </tr>
+                <tr>
+                  <td>Square Feet to Acre</td>
+                  <td>sq m to ac</td>
+                  <td>1 square meter = 0.00024 acre</td>
+                </tr>
+                <tr>
+                  <td>Square Meter to Acre</td>
+                  <td>sq m to ac</td>
+                  <td>1 square meter = 0.00024 acre</td>
+                </tr>
+                <tr>
+                  <td>Square Feet to Square Centimeter</td>
+                  <td>sq ft to sq cm</td>
+                  <td>1 square feet = 929.03 square cm</td>
+                </tr>
+                <tr>
+                  <td>Cent to Square Feet</td>
+                  <td>ct to sq ft</td>
+                  <td>1 cent = 435.56 square feet</td>
+                </tr>
+                <tr>
+                  <td>Cent to Square Meter</td>
+                  <td>ct to sq m</td>
+                  <td>1 cent = 40.46 square meter</td>
+                </tr>
+      
+                <!-- New Data Rows -->
+                <tr><td>Acre to Bigha</td><td>acre to bigha</td><td>1 acre = 1.613 bigha</td></tr>
+                <tr><td>Acre to Hectare</td><td>acre to hectare</td><td>1 acre = 0.404686 hectare</td></tr>
+                <tr><td>Acre to Sq. Feet</td><td>acre to sq ft</td><td>1 acre = 43560 sq feet</td></tr>
+                <tr><td>Acre to Sq. Meter</td><td>acre to sqm</td><td>1 acre = 4046.86 sqm</td></tr>
+                <tr><td>Bigha to Acre</td><td>bigha to acre</td><td>1 bigha = 0.6198 acre</td></tr>
+                <tr><td>Bigha to Hectare</td><td>bigha to hectare</td><td>1 bigha = 0.25 hectare</td></tr>
+                <tr><td>Cent to Sq. Feet</td><td>cent to sq ft</td><td>1 cent = 435.6 sq feet</td></tr>
+                <tr><td>Cent to Sq. Meter</td><td>cent to sqm</td><td>1 cent = 40.4686 sqm</td></tr>
+                <tr><td>CM to MM</td><td>cm to mm</td><td>1 cm = 10 mm</td></tr>
+                <tr><td>CM to Inches</td><td>cm to inches</td><td>1 cm = 0.3937 inches</td></tr>
+                <tr><td>Feet to CM</td><td>ft to cm</td><td>1 ft = 30.48 cm</td></tr>
+                <tr><td>Feet to Inches</td><td>ft to inches</td><td>1 ft = 12 inches</td></tr>
+                <tr><td>Feet to MM</td><td>ft to mm</td><td>1 ft = 304.8 mm</td></tr>
+                <tr><td>Feet to Meter</td><td>ft to meter</td><td>1 ft = 0.3048 meter</td></tr>
+                <tr><td>Hectare to Acre</td><td>hectare to acre</td><td>1 hectare = 2.47105 acre</td></tr>
+                <tr><td>Hectare to Bigha</td><td>hectare to bigha</td><td>1 hectare = 4 bigha</td></tr>
+                <tr><td>Hectare to Sq. Feet</td><td>hectare to sq ft</td><td>1 hectare = 107639 sq ft</td></tr>
+                <tr><td>Inches to CM</td><td>inches to cm</td><td>1 inch = 2.54 cm</td></tr>
+                <tr><td>Inches to MM</td><td>inches to mm</td><td>1 inch = 25.4 mm</td></tr>
+                <tr><td>Meter to CM</td><td>meter to cm</td><td>1 meter = 100 cm</td></tr>
+                <tr><td>Meter to Feet</td><td>meter to ft</td><td>1 meter = 3.28084 ft</td></tr>
+                <tr><td>Meter to Inches</td><td>meter to inches</td><td>1 meter = 39.37 inches</td></tr>
+                <tr><td>Meter to MM</td><td>meter to mm</td><td>1 meter = 1000 mm</td></tr>
+                <tr><td>Sq. Feet to Acre</td><td>sq ft to acre</td><td>1 sq ft = 0.000022957 acre</td></tr>
+                <tr><td>Sq. Feet to Sq. Meter</td><td>sq ft to sqm</td><td>1 sq ft = 0.092903 sqm</td></tr>
+                <tr><td>KM to Meter</td><td>km to meter</td><td>1 km = 1000 meter</td></tr>
+                <tr><td>Meter to KM</td><td>meter to km</td><td>1 meter = 0.001 km</td></tr>
+                <tr><td>Mile to KM</td><td>mile to km</td><td>1 mile = 1.60934 km</td></tr>
+                <tr><td>KM to Mile</td><td>km to mile</td><td>1 km = 0.621371 mile</td></tr>
+                <tr><td>Sq. Meter to Sq. Feet</td><td>sqm to sq ft</td><td>1 sqm = 10.7639 sq ft</td></tr>
+                <tr><td>Sq. KM to Acre</td><td>sq km to acre</td><td>1 sq km = 247.105 acre</td></tr>
+                <tr><td>Sq. Mile to Sq. KM</td><td>sq mile to sq km</td><td>1 sq mile = 2.58999 sq km</td></tr>
+                <tr><td>Guntha to Sq. Feet</td><td>guntha to sq ft</td><td>1 guntha = 1089 sq ft</td></tr>
+                <tr><td>Kanal to Sq. Feet</td><td>kanal to sq ft</td><td>1 kanal = 5445 sq ft</td></tr>
+                <tr><td>Marla to Sq. Feet</td><td>marla to sq ft</td><td>1 marla = 272.25 sq ft</td></tr>
+                <tr><td>Yard to Meter</td><td>yard to meter</td><td>1 yard = 0.9144 meter</td></tr>
+                <tr><td>Yard to Feet</td><td>yard to feet</td><td>1 yard = 3 feet</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <!-- End Table -->
+        </div>
+      </section>
+      
+
+</div>
+<!-- content close -->
+
+{% endblock %}

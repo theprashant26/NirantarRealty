@@ -1,0 +1,81 @@
+{% extends 'base/base.html' %} {% load static %} {% block body %}
+
+    <section id="subheader" class="relative jarallax text-light">
+                <img src="{% static 'images/background/6.webp' %}" class="jarallax-img" alt="">
+                <div class="container relative z-index-1000">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6 text-center">
+                            <h1>Filtered Projects</h1>
+                            <ul class="crumb pt-5 text-center">
+                                <li><a href="/">Home</a></li>
+                                <li class="active">Filtered Projects</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="de-overlay"></div>
+            </section>
+
+    <section class="relative lines-deco mb-5">
+        <div class="container">
+            <div class="row g-4">
+                <h3 class="text-center">Projects</h3>
+
+                {% for p in projects %}
+                <!-- Project Card -->
+                <div class="col-lg-4 col-sm-6">
+                    <div class="bg-light hover relative text-center wow fadeInUp" data-wow-delay=".3s">
+                        <div class="relative overflow-hidden rounded-10 shadow-soft">
+                            <!-- Title & Address -->
+                            <div class="abs z-2 w-100 text-center mt-4">
+                                <h3 class="mb-0 fs-4 hover-scale-1-1 p-color fw-600">{{ p.Title }}</h3>
+                                <h3 class="text-light fs-14">{{ p.Project_Location.name }}</h3>
+                            </div>
+
+                            <!-- Size & Configurations -->
+                            <div class="absolute mb-0 start-0 w-100 abs-end fs-36 text-white text-center z-2">
+                                {% if p.Size %}
+                                    <h6 class="mb-0 hover-scale-in-2 p-color">{{ p.Size }}</h6>
+                                {% endif %}
+                                <h6 class="mb-0 hover-scale-in-2 p-color">
+                                    {% for c in p.Configuration.all %}
+                                        {{ c.c_name }}{% if not forloop.last %}, {% endif %}
+                                    {% endfor %}
+                                </h6>
+                                <!-- View Button -->
+                                <button class="mb-0 hover-scale-in-2 p-color mt-2 fs-6 brochure p-1 fw-600" style="border:none">
+                                    <a href="{% url 'projectdetail' p.project_slug %}" class="view">View</a>
+                                </button>
+                            </div>
+
+                            <!-- Project Image -->
+                            {% if p.gallery_images.first.image %}
+                            <img src="{{ p.gallery_images.first.image.url }}" class="img-fluid hover-scale-1-2" alt="{{ p.Title }}" style="height: 300px !important;">
+                            {% else %}
+                            <img src="{% static 'default.jpg' %}" class="img-fluid hover-scale-1-2" alt="No Image" style="height: 300px !important;">
+                            {% endif %}
+
+                            <!-- Gradient Overlay -->
+                            <div class="gradient-trans-black-bottom abs w-100 h-100" style="bottom: 0px;"></div>
+                        </div>
+
+                        <!-- Extra Info -->
+                        <div class="mt-3">
+                            <p class="fw-bold mb-1">Price: ₹{{ p.Price }}</p>
+                            <p class="mb-1">Stage: {{ p.stage.stage }}</p>
+                            <p class="mb-1">Brand: {{ p.projectbrand.name }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <div class="col-12 text-center">
+                    <p class="text-muted">No matching projects found.</p>
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
