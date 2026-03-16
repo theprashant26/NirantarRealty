@@ -152,11 +152,13 @@ def filter_projects(request):
 
 
 class ProjectDetailView(View):
+
     def get(self, request, slug):
         projj = get_object_or_404(Projects, project_slug=slug)
         amenities = projj.Amenities.all()
         floor_plans = projj.floor_plans.all()
         configuration = projj.Configuration.all()
+
         return render(request, 'Estateapp/projectdetail.html', {
             'projj': projj,
             'amenities': amenities,
@@ -166,22 +168,42 @@ class ProjectDetailView(View):
 
     def post(self, request, slug):
         projj = get_object_or_404(Projects, project_slug=slug)
+
         name = request.POST.get('name')
         email = request.POST.get('email')
         city = request.POST.get('city')
         mobile = request.POST.get('mobile')
 
         if name and email and city and mobile:
-            project_enquiry.objects.create(
+
+            enquiry = project_enquiry.objects.create(
                 project=projj,
                 name=name,
                 email=email,
                 city=city,
                 mobile=mobile
             )
+
+            # ✅ Send data to Zapier webhook
+            webhook_url = "https://hooks.zapier.com/hooks/catch/12332307/ux01db9/"
+
+            payload = {
+                "project_name": projj.Title,
+                "name": name,
+                "email": email,
+                "city": city,
+                "mobile": mobile
+            }
+
+            try:
+                requests.post(webhook_url, json=payload, timeout=5)
+            except requests.exceptions.RequestException:
+                pass  # prevent form crash if webhook fails
+
             sweetify.success(request, 'Enquiry Submitted!', text='We will contact you shortly.', timer=3000)
-            # ✅ Redirect to thankyou page with project slug
+
             return redirect(reverse('thankyou', kwargs={'slug': projj.project_slug}))
+
         else:
             sweetify.error(request, 'Form Incomplete', text='Please fill all the fields.', timer=3000)
             return redirect(request.path_info)
