@@ -190,21 +190,21 @@
         <div class="v-center">
           <div class="row">
             <div class="col-lg-7 col-md-12 col-12">
-              <div class="abs abs-centered2 z-1000 w-75 bottom-0">
+              <div class="abs abs-centered2 z-1000 w-md-75 bottom-0">
                 <div class="container" style="margin: 20px; padding: 0 15px">
 
                   <h2 class="fs-1 C fadeInUp wow" data-wow-delay=".3s">Conscient Elevate Residence</h2>
                   <h5>{{projj.Address_line1}}</h5>
-                  <div class="row p-2 flex-wrap gap-2">
-                    <div class="col-md-4 col-sm-2 col-3 configuration-item">
-                      <h3>Price</h3>
-                      <p>{{projj.Price}}</p>
-                    </div>
-                    <div class="col-md-4 col-sm-2 col-3 configuration-item">
+                  <div class="row p-2 flex-wrap gy-2">
+                    <div class="col-md-4 col-sm-2 col-7 configuration-item">
                       <h3>Sizes</h3>
                       <p>{{projj.Size}}</p>
                     </div>
-                    <div class="col-md-4 col-sm-4 col-6 configuration-item">
+                    <div class="col-md-4 col-sm-2 col-5 configuration-item">
+                      <h3>Price</h3>
+                      <p>{{projj.Price}}</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-7 configuration-item">
                       <h3>Configurations</h3>
                           {% if projj.Configuration.all %}
                         <ul class="list-unstyled">
@@ -216,11 +216,11 @@
                         <p>No configurations available</p>
                       {% endif %}
                     </div>
-                    <div class="col-md-4 col-sm-2 col-4 configuration-item">
+                    <div class="col-md-4 col-sm-2 col-5 configuration-item">
                       <h3>Status</h3>
                       <p>{{projj.stage}}</p>
                     </div>
-                    <div class="col-md-4 col-sm-2 col-4 configuration-item">
+                    <div class="col-md-4 col-sm-2 col-12 configuration-item">
                       <h3>Rera No.</h3>
                       <p>{{projj.RERA_No}}</p>
                     </div>
