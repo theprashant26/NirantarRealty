@@ -115,8 +115,8 @@
                 <!-- logo begin -->
                 <div id="logo">
                   <a href="/">
-                      <img class="logo-main" src="{% static 'images/background/nirantarw.jpg' %}" alt="nirantar realty" style="width:130px;height:100px;" />
-                      <img class="logo-scroll" src="{% static 'images/background/nirantarw.jpg' %}" alt="nirantar realty" style="width:130px;height:100px;" />
+                      <img class="logo-main" src="{% static 'images/background/nirantarw.jpg' %}" alt="nirantar realty" style="width:100%;height:60px;" />
+                      <img class="logo-scroll" src="{% static 'images/background/nirantarw.jpg' %}" alt="nirantar realty" style="width:100%;height:60px;" />
                     </a>
                 </div>
                 <!-- logo close -->
@@ -154,19 +154,19 @@
                   <div id="logo" style="display: inline-block;">
                     <a href="{{projj.get_absolute_url}}">
                       {% if projj.Proj_Logo %}
-                      <img class="logo-main" src="{{projj.Proj_Logo.url}}" alt="" />
+                      <img class="logo-main" src="{{projj.Proj_Logo.url}}" alt="" style="width:100%;height:60px;"/>
                       {% else %}
-                      <img class="logo-main" src="{% static 'images/background/nirantarw.jpg' %}" alt="" />
+                      <img class="logo-main" src="{% static 'images/background/nirantarw.jpg' %}" alt="" style="width:100%;height:60px;"/>
                       {% endif %}
                       {% if projj.Proj_Logo %}
-                      <img class="logo-scroll" src="{{projj.Proj_Logo.url}}" alt="" />
+                      <img class="logo-scroll" src="{{projj.Proj_Logo.url}}" alt="" style="width:100%;height:60px;"/>
                       {% else %}
-                      <img class="logo-scroll" src="{% static 'images/background/nirantarw.jpg' %}" alt="" />
+                      <img class="logo-scroll" src="{% static 'images/background/nirantarw.jpg' %}" alt="" style="width:100%;height:60px;"/>
                       {% endif %}
                       {% if projj.Proj_Logo %}
-                      <img class="logo-mobile" src="{{projj.Proj_Logo.url}}" alt="" />
+                      <img class="logo-mobile" src="{{projj.Proj_Logo.url}}" alt="" style="width:100%;height:60px;">
                       {% else %}
-                      <img class="logo-mobile" src="{% static 'images/background/nirantarw.jpg' %}" alt="" />
+                      <img class="logo-mobile" src="{% static 'images/background/nirantarw.jpg' %}" alt="" style="width:100%;height:60px;"/>
                       {% endif %}
                     </a>
                   </div>
@@ -187,46 +187,76 @@
 
       <section id="section-intro"
         class="section-dark text-light no-top no-bottom position-relative overflow-hidden z-1000">
-        <div class="v-center relative">
-          <div class="abs abs-centered centered z-1000 w-100 bottom-0">
-            <div class="container" style="max-width: 1200px; margin: 20px; padding: 0 15px">
+        <div class="v-center">
+          <div class="row">
+            <div class="col-lg-7 col-md-12 col-12">
+              <div class="abs abs-centered2 z-1000 w-75 bottom-0">
+                <div class="container" style="margin: 20px; padding: 0 15px">
 
-              <h2 class="fs-1 C fadeInUp wow" data-wow-delay=".3s">{{projj.Title}}</h2>
-              <h5>{{projj.Address_line1}}</h5>
-              <div class="row p-2">
-                <div class="col-sm-2 col-3 configuration-item">
-                  <h3>Price</h3>
-                  <p>{{projj.Price}}</p>
-                </div>
-                <div class="col-sm-2 col-3 configuration-item">
-                  <h3>Sizes</h3>
-                  <p>{{projj.Size}}</p>
-                </div>
-                <div class="col-sm-3 col-6 configuration-item">
-                  <h3>Configurations</h3>
-                  {% if projj.Configuration.all %}
-                    <ul class="list-unstyled">
-                      {% for config in projj.Configuration.all %}
-                        <li>{{ config }}</li>
-                      {% endfor %}
-                    </ul>
-                  {% else %}
-                    <p>No configurations available</p>
-                  {% endif %}
-                </div>
-                <div class="col-sm-2 col-4 configuration-item">
-                  <h3>Status</h3>
-                  <p>{{projj.stage}}</p>
-                </div>
-                <div class="col-sm-2 col-4 configuration-item">
-                  <h3>Rera No.</h3>
-                  <p>{{projj.RERA_No}}</p>
+                  <h2 class="fs-1 C fadeInUp wow" data-wow-delay=".3s">Conscient Elevate Residence</h2>
+                  <h5>{{projj.Address_line1}}</h5>
+                  <div class="row p-2 flex-wrap gap-2">
+                    <div class="col-md-4 col-sm-2 col-3 configuration-item">
+                      <h3>Price</h3>
+                      <p>{{projj.Price}}</p>
+                    </div>
+                    <div class="col-md-4 col-sm-2 col-3 configuration-item">
+                      <h3>Sizes</h3>
+                      <p>{{projj.Size}}</p>
+                    </div>
+                    <div class="col-md-4 col-sm-4 col-6 configuration-item">
+                      <h3>Configurations</h3>
+                          {% if projj.Configuration.all %}
+                        <ul class="list-unstyled">
+                          {% for config in projj.Configuration.all %}
+                            <li>{{ config }}</li>
+                          {% endfor %}
+                        </ul>
+                      {% else %}
+                        <p>No configurations available</p>
+                      {% endif %}
+                    </div>
+                    <div class="col-md-4 col-sm-2 col-4 configuration-item">
+                      <h3>Status</h3>
+                      <p>{{projj.stage}}</p>
+                    </div>
+                    <div class="col-md-4 col-sm-2 col-4 configuration-item">
+                      <h3>Rera No.</h3>
+                      <p>{{projj.RERA_No}}</p>
+                    </div>
+                  </div>
+                  <button class="brochure p-3 mt-3 fs-4 fw-600" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    Download Floor Plan
+                  </button>
+
                 </div>
               </div>
-              <button class="brochure p-3 mt-3 fs-4 fw-600" data-bs-toggle="modal" data-bs-target="#contactModal">
-                Download Floor Plan
-              </button>
+            </div>
+            <div class="col-lg-5 col-md-6 col-12"> 
+              <div class="brochure-form-wrapper d-none d-md-inline">
+                <div class="brochure-form">
 
+                  <div class="text-center">
+                    <h4>Get a Free Consultation</h4>
+                  </div>
+
+                  <form action="{% url 'projectdetail' projj.project_slug %}" method="POST" id="form4">
+                    {% csrf_token %}
+
+                    <input type="text" name="name" class="form-control form-group" placeholder="Enter Your Name" required>
+
+                    <input type="email" name="email" class="form-control form-group" placeholder="Enter your Mail" required>
+
+                    <input type="text" name="city" class="form-control form-group" placeholder="Enter your City" required>
+
+                    <input type="tel" name="mobile" class="form-control form-group" placeholder="Enter your Mobile Number" required>
+
+                    <button type="submit" class="contact_form_submit">Send</button>
+
+                  </form>
+
+                </div>
+              </div>
             </div>
           </div>
 
@@ -269,6 +299,26 @@
           </div>
         </div>
       </section>
+
+      <!-- only on mobile -->
+      <div class="container d-md-none pt-5">
+        <div class="contact_inner shadow-soft ">
+          <div class="contact_form_inner">
+            <div class="contact_field">
+              <h4>Get a Free Consultation</h4>
+              <form action="{% url 'projectdetail' projj.project_slug %}" method="POST">
+                          {% csrf_token %}
+                          <input type="text" name="name" class="form-control form-group" placeholder="Enter Your Name" />
+                          <input type="text" name="email" class="form-control form-group" placeholder="Enter your Mail" />
+                          <input type="text" name="city" class="form-control form-group" placeholder="Enter your City" />
+                          <input type="text" name="mobile" class="form-control form-group" placeholder="Enter your Mobile Number" />
+                          <input type="hidden" name="{{projj.Title}}" value="{{projj.Title}}" />
+                          <button class="contact_form_submit">Send</button>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- about -->
       <section class="no-top no-bottom overflow-hidden mt-5 pt-1 mb-5" id="aboutus">

@@ -22948,7 +22948,7 @@ textarea.form-control {
   object-fit: cover;
   /* Ensures the image covers the space without distortion */
   object-position: center;
-  max-width: 100vw !important;
+  max-width: 100% !important;
   border-radius: 17px;
   /* Make sure the width fills the container */
 }
@@ -25280,4 +25280,92 @@ figure img {
   .card-img-overlay p {
     font-size: 0.8rem;
   }
+}
+
+.brochure-form-wrapper {
+  position: absolute;
+  right: 30px;
+  bottom: 35px;
+  z-index: 9999;
+  width: 380px;
+}
+
+.brochure-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px!important;
+  backdrop-filter: blur(10px);
+}
+
+.form-logo {
+  max-width: 140px;
+  margin-bottom: 10px;
+}
+
+.brochure-form h4 {
+  color: #000 !important;
+}
+
+.brochure-form .form-control {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 5px!important;
+  border: 1px solid #ddd;
+}
+
+.brochure-form .form-control::placeholder {
+  color: black;
+}
+
+.brochure-form .form-control {
+  color: black;
+}
+
+.contact_form_submit {
+  width: 100%;
+  background: #ff7a00;
+  border: none;
+  padding: 12px;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+
+.contact_form_submit:hover {
+  background: #000;
+}
+
+/* Tablet */
+@media (max-width:1024px) {
+
+  .brochure-form-wrapper {
+    width: 320px;
+    right: 20px;
+  }
+
+}
+
+/* Mobile */
+@media (max-width:768px) {
+
+  .brochure-form-wrapper {
+    position: relative;
+    width: 100%;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+  }
+
+  .brochure-form {
+    width: 100%;
+  }
+
+}
+
+.abs-centered2 {
+    top: 25%;
+    left: 0;
+    
 }
